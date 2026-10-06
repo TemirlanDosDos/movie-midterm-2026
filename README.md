@@ -127,14 +127,11 @@ Result:
 
 ![Form focus result](screenshots/contact-focus-result.png)
 
-## How to open the project
+## How to open
 
-Clone the repository and open `index.html` in a browser. It can also be opened with the built-in preview in WebStorm.
+Open the published website using the link below:
 
-```bash
-git clone https://github.com/TemirlanDosDos/movie-midterm-2026.git
-cd movie-midterm-2026
-```
+[https://movie-midterm-2026.vercel.app](https://movie-midterm-2026.vercel.app)
 
 ## Repository
 
