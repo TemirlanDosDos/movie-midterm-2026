@@ -1,194 +1,141 @@
 # CineScope
 
-CineScope is a responsive movie website created for our Frontend Development midterm. The website helps visitors browse a small film collection, read information about each movie, watch trailers, compare sample ratings, and leave a review.
+CineScope is our Frontend Development midterm project. It is a small movie website where a visitor can browse movies, check ratings, watch trailers and read or submit reviews.
 
 ## Team
 
-- Temirlan Dosmukhambetov, IT-2502
+- Temirlan Dosmukhambetov — IT-2502
 - Chingizkhan
 - Nurkadir
 
-## Project pages
+## Pages
 
-- `index.html` — home page with featured movies and genres
-- `movies.html` — responsive movie catalog
-- `movie-details.html` — descriptions, cast, ratings, and trailers
-- `reviews.html` — rating table, user reviews, and review form
-- `contact.html` — team information and feedback form
+- **Home** — introduction, featured movies and genres
+- **Movies** — responsive catalog with six movies
+- **Details** — movie information, ratings and trailers
+- **Reviews** — rating table, user reviews and review form
+- **Contact** — information about the team and feedback form
 
-All five pages are connected through the navigation menu.
+The same navigation menu connects all five pages.
 
-## Features
+## Main features
 
-- semantic HTML5 structure with `header`, `nav`, `main`, `section`, `article`, and `footer`
-- responsive layouts for desktop, tablet, and mobile screens
+- responsive layout for desktop, tablet and mobile
 - Bootstrap grid and utility classes
 - custom CSS Grid and Flexbox layouts
-- movie cards with lazy-loaded images
-- responsive YouTube trailer embeds
-- rating table styled with `:nth-child()`
-- review and contact forms with visible focus states
-- CSS variables for shared colors and sizing
-- hover effects and sticky navigation
-- Google Fonts: DM Sans and Space Grotesk
+- semantic HTML elements
+- movie posters with lazy loading
+- embedded YouTube trailers
+- rating table with alternating rows
+- review and contact forms
+- hover and focus effects
+- CSS variables and Google Fonts
 
 ## Technologies
 
-- HTML5
-- CSS3
-- Bootstrap 5.3
-- Git and GitHub
-- GitHub Pages
+HTML5, CSS3, Bootstrap 5.3, Git and GitHub were used in this project. The website does not require installation or a build process.
 
-## Individual contributions
+## Our work
 
 ### Temirlan Dosmukhambetov
 
-- created the home and contact pages
-- developed the shared visual style and responsive navigation
-- connected the pages and completed final integration
-- checked responsiveness and prepared the repository documentation
+I created the home and contact pages, made the shared visual style, connected the pages and completed the final integration and documentation.
 
 ### Chingizkhan
 
-- created the movie catalog
-- created the detailed movie information and trailer sections
-- designed the movie cards and film detail layouts
+Chingizkhan created the movie catalog and the detailed movie sections with ratings and trailers.
 
 ### Nurkadir
 
-- created the reviews page
-- added the movie rating table and sample reviews
-- created the review submission form
+Nurkadir created the reviews page, rating table, example reviews and review form.
 
-## Responsive approach
+## Website screenshots
 
-The project follows a mostly mobile-first approach. Bootstrap columns control the movie-card layout, while custom media queries adapt navigation, spacing, typography, forms, and two-column sections. The main breakpoints are `768px` for mobile/tablet changes and `992px` for larger layouts.
+### Home page
 
-## Screenshots to add before submission
+The home page introduces the project and gives quick access to the movie catalog and reviews.
 
-Save the screenshots inside the `screenshots` folder using the exact filenames below. After saving an image, copy the provided Markdown line into this README under its description.
+![CineScope home page](screenshots/home-desktop.png)
 
-### 1. Home page on desktop
+### Movie catalog
 
-Open `index.html` at approximately 1440px width. Capture the navigation, hero heading, buttons, and poster composition.
+Bootstrap columns display three movie cards on a large screen and fewer columns on smaller screens.
 
-**Placeholder:** `screenshots/home-desktop.png`
+![Responsive movie catalog](screenshots/movies-grid.png)
 
-```md
-![CineScope home page on desktop](screenshots/home-desktop.png)
-```
+### Movie details and trailer
 
-### 2. Movie catalog responsive grid
+The details page combines information about each movie with a responsive YouTube trailer.
 
-Open `movies.html` at desktop width and capture one complete row of three movie cards. This demonstrates the Bootstrap grid.
+![Movie details and trailer](screenshots/movie-details-trailer.png)
 
-**Placeholder:** `screenshots/movies-grid.png`
+### Ratings and reviews
 
-```md
-![Movie catalog Bootstrap grid](screenshots/movies-grid.png)
-```
+The reviews page contains a rating table and a form for visitor feedback.
 
-### 3. Movie details and trailer
-
-Open `movie-details.html`, scroll to an embedded trailer, and capture the movie information together with the trailer area.
-
-**Placeholder:** `screenshots/movie-details-trailer.png`
-
-```md
-![Movie details and responsive trailer](screenshots/movie-details-trailer.png)
-```
-
-### 4. Reviews table and form
-
-Open `reviews.html`. Take one screenshot of the rating table and another screenshot of the review form.
-
-**Placeholders:** `screenshots/reviews-table.png` and `screenshots/review-form.png`
-
-```md
 ![Movie rating table](screenshots/reviews-table.png)
-![Review submission form](screenshots/review-form.png)
-```
 
-### 5. Contact page on mobile
+![Review form](screenshots/review-form.png)
 
-Open browser developer tools, select a mobile width around 390px, and capture the team or contact form section. The screenshot should show that the columns stack vertically.
+### Mobile layout
 
-**Placeholder:** `screenshots/contact-mobile.png`
+On a narrow screen, the team cards and contact content are placed vertically.
 
-```md
-![Contact page mobile layout](screenshots/contact-mobile.png)
-```
+![Contact page on mobile](screenshots/contact-mobile.png)
 
-## Code screenshots to add
+## Code examples
 
-These screenshots show the code responsible for the visible result. Keep the editor text large enough to read and include the filename in the WebStorm tab.
+### Bootstrap responsive grid
 
-### Code screenshot A — Bootstrap grid
+The Bootstrap column classes change the number of movie cards in each row depending on the screen width.
 
-In `movies.html`, capture a movie card beginning with:
+![Bootstrap grid code](screenshots/code-bootstrap-grid.png)
 
-```html
-<div class="col-12 col-sm-6 col-lg-4">
-```
+Result:
 
-This code produces one card per row on mobile, two on small/tablet screens, and three on large screens.
+![Bootstrap grid result](screenshots/movies-grid.png)
 
-**Save as:** `screenshots/code-bootstrap-grid.png`
+### CSS Grid
 
-```md
-![Bootstrap responsive grid code](screenshots/code-bootstrap-grid.png)
-```
+CSS Grid is used for the genre section. A media query changes it to one column on mobile screens.
 
-### Code screenshot B — CSS Grid
+![CSS Grid code](screenshots/code-css-grid.png)
 
-In `css/style.css`, capture the `.genre-grid` rule and its mobile media-query rule. This code produces two genre columns on larger screens and one column on mobile.
+### Flexbox navigation
 
-**Save as:** `screenshots/code-css-grid.png`
+Flexbox keeps the logo and menu aligned inside the shared navigation bar.
 
-```md
-![CSS Grid and mobile media query](screenshots/code-css-grid.png)
-```
-
-### Code screenshot C — Flexbox navigation
-
-In `css/style.css`, capture the `.site-navigation` rule. This code aligns the logo and links horizontally and changes them to a vertical layout on small screens.
-
-**Save as:** `screenshots/code-flexbox-navigation.png`
-
-```md
 ![Flexbox navigation code](screenshots/code-flexbox-navigation.png)
-```
 
-### Code screenshot D — Table pseudo-class
+### `:nth-child()` selector
 
-In `css/nurkadir.css`, capture `.ratings-table tbody tr:nth-child(even)`. This rule gives alternating table rows a different background.
+The selector gives every second row in the rating table a different background.
 
-**Save as:** `screenshots/code-nth-child.png`
+![CSS nth-child code](screenshots/code-nth-child.png)
 
-```md
-![CSS nth-child table styling](screenshots/code-nth-child.png)
-```
+Result:
 
-### Code screenshot E — Form focus state
+![Alternating table rows](screenshots/reviews-table.png)
 
-In `css/style.css`, capture the `.form-control:focus` rule. Then click inside a field on `contact.html` and capture the yellow focus highlight.
+### Form focus state
 
-**Save as:** `screenshots/code-form-focus.png`
+The focus rule makes the currently selected form field easier to see.
 
-```md
-![Accessible form focus code](screenshots/code-form-focus.png)
-```
+![Form focus CSS](screenshots/code-form-focus.png)
 
-## Running the project
+Result:
 
-No installation is required. Clone the repository and open `index.html` in a browser, or use WebStorm's built-in browser preview.
+![Form focus result](screenshots/contact-focus-result.png)
+
+## How to open the project
+
+Clone the repository and open `index.html` in a browser. It can also be opened with the built-in preview in WebStorm.
 
 ```bash
 git clone https://github.com/TemirlanDosDos/movie-midterm-2026.git
 cd movie-midterm-2026
 ```
 
-## Published website
+## Repository
 
-GitHub Pages link will be added here after deployment.
+https://github.com/TemirlanDosDos/movie-midterm-2026
