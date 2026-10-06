@@ -1,161 +1,194 @@
-# CineScope — Movie Website
+# CineScope
 
-Midterm project: a responsive multi-page movie website with movie information, ratings, trailers, and user reviews.
+CineScope is a responsive movie website created for our Frontend Development midterm. The website helps visitors browse a small film collection, read information about each movie, watch trailers, compare sample ratings, and leave a review.
 
 ## Team
 
-- Temirlan Dosmukhambetov — team lead, Home page, shared layout and integration
-- Chingizkhan — Movies catalog and Movie Details pages
-- Nurkadir — Reviews and Contact pages
+- Temirlan Dosmukhambetov, IT-2502
+- Chingizkhan
+- Nurkadir
 
-## Required pages
+## Project pages
 
-1. `index.html` — Home
-2. `movies.html` — Movies catalog
-3. `movie-details.html` — Movie information, rating, and trailer
-4. `reviews.html` — Reviews, rating table, and review form
-5. `contact.html` — Contact and feedback form
+- `index.html` — home page with featured movies and genres
+- `movies.html` — responsive movie catalog
+- `movie-details.html` — descriptions, cast, ratings, and trailers
+- `reviews.html` — rating table, user reviews, and review form
+- `contact.html` — team information and feedback form
 
-## Branches
+All five pages are connected through the navigation menu.
 
-- `main` — Temirlan and final integrated version
-- `feature/chingizkhan` — Chingizkhan's work
-- `feature/nurkadir` — Nurkadir's work
+## Features
 
-Do not code directly in another member's branch. Each member commits and pushes only to their own branch. Temirlan reviews and merges finished work into `main`.
+- semantic HTML5 structure with `header`, `nav`, `main`, `section`, `article`, and `footer`
+- responsive layouts for desktop, tablet, and mobile screens
+- Bootstrap grid and utility classes
+- custom CSS Grid and Flexbox layouts
+- movie cards with lazy-loaded images
+- responsive YouTube trailer embeds
+- rating table styled with `:nth-child()`
+- review and contact forms with visible focus states
+- CSS variables for shared colors and sizing
+- hover effects and sticky navigation
+- Google Fonts: DM Sans and Space Grotesk
 
 ## Technologies
 
-- Semantic HTML5
-- External CSS
-- Flexbox and CSS Grid
-- Bootstrap 5 grid and utilities
-- Responsive media queries
-- Git and GitHub Pages
+- HTML5
+- CSS3
+- Bootstrap 5.3
+- Git and GitHub
+- GitHub Pages
 
-## Project structure
+## Individual contributions
 
-```text
-movie-midterm-2026/
-├── index.html
-├── movies.html
-├── movie-details.html
-├── reviews.html
-├── contact.html
-├── css/
-│   ├── style.css
-│   ├── chingizkhan.css
-│   └── nurkadir.css
-├── js/
-│   └── main.js
-└── assets/
-    └── images/
+### Temirlan Dosmukhambetov
+
+- created the home and contact pages
+- developed the shared visual style and responsive navigation
+- connected the pages and completed final integration
+- checked responsiveness and prepared the repository documentation
+
+### Chingizkhan
+
+- created the movie catalog
+- created the detailed movie information and trailer sections
+- designed the movie cards and film detail layouts
+
+### Nurkadir
+
+- created the reviews page
+- added the movie rating table and sample reviews
+- created the review submission form
+
+## Responsive approach
+
+The project follows a mostly mobile-first approach. Bootstrap columns control the movie-card layout, while custom media queries adapt navigation, spacing, typography, forms, and two-column sections. The main breakpoints are `768px` for mobile/tablet changes and `992px` for larger layouts.
+
+## Screenshots to add before submission
+
+Save the screenshots inside the `screenshots` folder using the exact filenames below. After saving an image, copy the provided Markdown line into this README under its description.
+
+### 1. Home page on desktop
+
+Open `index.html` at approximately 1440px width. Capture the navigation, hero heading, buttons, and poster composition.
+
+**Placeholder:** `screenshots/home-desktop.png`
+
+```md
+![CineScope home page on desktop](screenshots/home-desktop.png)
 ```
 
-## Responsibilities
+### 2. Movie catalog responsive grid
 
-### Temirlan — `main`
+Open `movies.html` at desktop width and capture one complete row of three movie cards. This demonstrates the Bootstrap grid.
 
-- Create the visual concept, colors, Google Font, logo, and shared navigation.
-- Build `index.html`: hero section, featured movies, genre list, and call-to-action.
-- Maintain shared `css/style.css` with `:root` variables and global responsive rules.
-- Ensure the same `header`, navigation, and `footer` appear on all five pages.
-- Integrate both feature branches, test every link and breakpoint, finish this README, and publish with GitHub Pages.
+**Placeholder:** `screenshots/movies-grid.png`
 
-### Chingizkhan — `feature/chingizkhan`
+```md
+![Movie catalog Bootstrap grid](screenshots/movies-grid.png)
+```
 
-- Build `movies.html` with a Bootstrap responsive movie-card grid.
-- Build `movie-details.html` with poster, description, cast/genre list, rating, and responsive trailer embed.
-- Put page-specific rules in `css/chingizkhan.css`.
-- Use semantic HTML, Bootstrap containers/rows/columns/utilities, Grid or Flexbox, `loading="lazy"` for below-the-fold images, hover effects, and responsive behavior.
-- Verify navigation to all five pages and push the branch when complete.
+### 3. Movie details and trailer
 
-### Nurkadir — `feature/nurkadir`
+Open `movie-details.html`, scroll to an embedded trailer, and capture the movie information together with the trailer area.
 
-- Build `reviews.html` with review cards, one movie-rating table, and a review submission form.
-- Build `contact.html` with team/contact information, social links, and a feedback form.
-- Put page-specific rules in `css/nurkadir.css`.
-- Use semantic HTML, Bootstrap form utilities, `:focus`, `:hover`, `:nth-child()`, Flexbox or Grid, and responsive behavior.
-- Verify navigation to all five pages and push the branch when complete.
+**Placeholder:** `screenshots/movie-details-trailer.png`
 
-## Git workflow for Chingizkhan
+```md
+![Movie details and responsive trailer](screenshots/movie-details-trailer.png)
+```
+
+### 4. Reviews table and form
+
+Open `reviews.html`. Take one screenshot of the rating table and another screenshot of the review form.
+
+**Placeholders:** `screenshots/reviews-table.png` and `screenshots/review-form.png`
+
+```md
+![Movie rating table](screenshots/reviews-table.png)
+![Review submission form](screenshots/review-form.png)
+```
+
+### 5. Contact page on mobile
+
+Open browser developer tools, select a mobile width around 390px, and capture the team or contact form section. The screenshot should show that the columns stack vertically.
+
+**Placeholder:** `screenshots/contact-mobile.png`
+
+```md
+![Contact page mobile layout](screenshots/contact-mobile.png)
+```
+
+## Code screenshots to add
+
+These screenshots show the code responsible for the visible result. Keep the editor text large enough to read and include the filename in the WebStorm tab.
+
+### Code screenshot A — Bootstrap grid
+
+In `movies.html`, capture a movie card beginning with:
+
+```html
+<div class="col-12 col-sm-6 col-lg-4">
+```
+
+This code produces one card per row on mobile, two on small/tablet screens, and three on large screens.
+
+**Save as:** `screenshots/code-bootstrap-grid.png`
+
+```md
+![Bootstrap responsive grid code](screenshots/code-bootstrap-grid.png)
+```
+
+### Code screenshot B — CSS Grid
+
+In `css/style.css`, capture the `.genre-grid` rule and its mobile media-query rule. This code produces two genre columns on larger screens and one column on mobile.
+
+**Save as:** `screenshots/code-css-grid.png`
+
+```md
+![CSS Grid and mobile media query](screenshots/code-css-grid.png)
+```
+
+### Code screenshot C — Flexbox navigation
+
+In `css/style.css`, capture the `.site-navigation` rule. This code aligns the logo and links horizontally and changes them to a vertical layout on small screens.
+
+**Save as:** `screenshots/code-flexbox-navigation.png`
+
+```md
+![Flexbox navigation code](screenshots/code-flexbox-navigation.png)
+```
+
+### Code screenshot D — Table pseudo-class
+
+In `css/nurkadir.css`, capture `.ratings-table tbody tr:nth-child(even)`. This rule gives alternating table rows a different background.
+
+**Save as:** `screenshots/code-nth-child.png`
+
+```md
+![CSS nth-child table styling](screenshots/code-nth-child.png)
+```
+
+### Code screenshot E — Form focus state
+
+In `css/style.css`, capture the `.form-control:focus` rule. Then click inside a field on `contact.html` and capture the yellow focus highlight.
+
+**Save as:** `screenshots/code-form-focus.png`
+
+```md
+![Accessible form focus code](screenshots/code-form-focus.png)
+```
+
+## Running the project
+
+No installation is required. Clone the repository and open `index.html` in a browser, or use WebStorm's built-in browser preview.
 
 ```bash
 git clone https://github.com/TemirlanDosDos/movie-midterm-2026.git
 cd movie-midterm-2026
-git switch feature/chingizkhan
-git pull origin feature/chingizkhan
 ```
-
-After making changes:
-
-```bash
-git status
-git add movies.html movie-details.html css/chingizkhan.css assets/images
-git commit -m "Build movie catalog and details pages"
-git push origin feature/chingizkhan
-```
-
-## Git workflow for Nurkadir
-
-```bash
-git clone https://github.com/TemirlanDosDos/movie-midterm-2026.git
-cd movie-midterm-2026
-git switch feature/nurkadir
-git pull origin feature/nurkadir
-```
-
-After making changes:
-
-```bash
-git status
-git add reviews.html contact.html css/nurkadir.css assets/images
-git commit -m "Build reviews and contact pages"
-git push origin feature/nurkadir
-```
-
-## Before starting each work session
-
-```bash
-git switch YOUR-BRANCH-NAME
-git pull origin YOUR-BRANCH-NAME
-```
-
-Always check the branch with `git branch --show-current` before editing or committing.
-
-## Merge workflow for Temirlan
-
-After both members push their work:
-
-```bash
-git switch main
-git pull origin main
-git merge feature/chingizkhan
-git merge feature/nurkadir
-git push origin main
-```
-
-Resolve any conflicts carefully, then test all pages before pushing.
-
-## Requirements checklist
-
-- [ ] At least five connected pages
-- [ ] Shared header, Flexbox navigation, main, and footer
-- [ ] Correct headings, paragraphs, lists, links, and images
-- [ ] At least one table
-- [ ] At least one form
-- [ ] External CSS only
-- [ ] Flexbox and Grid demonstrated
-- [ ] At least one positioning technique
-- [ ] `:hover`, `:focus`, and `:nth-child()` used
-- [ ] At least three CSS variables in `:root`
-- [ ] Google Font or self-hosted font
-- [ ] `loading="lazy"` on below-the-fold images
-- [ ] Mobile and tablet media-query breakpoints
-- [ ] Bootstrap grid and utility classes
-- [ ] Published website link added here
 
 ## Published website
 
-To be added after GitHub Pages deployment.
-
+GitHub Pages link will be added here after deployment.

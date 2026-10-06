@@ -3,34 +3,116 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CineScope is a student movie website with film information, ratings, trailers, and reviews.">
   <title>CineScope | Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="home-page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
   <header class="site-header">
     <nav class="site-navigation container py-3" aria-label="Main navigation">
-      <a class="navbar-brand text-warning fw-bold" href="index.html">CineScope</a>
-      <div class="d-flex flex-wrap gap-3">
-        <a class="text-white" href="index.html">Home</a>
-        <a class="text-white" href="movies.html">Movies</a>
-        <a class="text-white" href="movie-details.html">Details</a>
-        <a class="text-white" href="reviews.html">Reviews</a>
-        <a class="text-white" href="contact.html">Contact</a>
+      <a class="navbar-brand text-warning fw-bold" href="index.html">CineScope<span class="brand-dot" aria-hidden="true">.</span></a>
+      <div class="nav-links d-flex flex-wrap gap-3">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="movies.html">Movies</a>
+        <a href="movie-details.html">Details</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact</a>
       </div>
     </nav>
   </header>
-  <main class="placeholder-page container">
-    <h1>Movie information, ratings, trailers, and reviews</h1>
-    <p class="lead">Temirlan will develop the complete Home page here.</p>
+
+  <main id="main-content">
+    <section class="hero container">
+      <div class="row align-items-center g-5">
+        <div class="col-12 col-lg-6 hero-copy">
+          <p class="eyebrow">MOVIES WORTH TALKING ABOUT</p>
+          <h1>Choose tonight's story.</h1>
+          <p class="hero-description">Browse memorable films, compare ratings, watch official trailers, and see what other viewers think before the opening scene.</p>
+          <div class="d-flex flex-wrap gap-3">
+            <a class="btn btn-warning btn-lg px-4" href="movies.html">Explore movies</a>
+            <a class="btn btn-outline-light btn-lg px-4" href="reviews.html">Read reviews</a>
+          </div>
+          <ul class="hero-facts" aria-label="Website features">
+            <li><strong>6</strong><span>selected films</span></li>
+            <li><strong>5</strong><span>connected pages</span></li>
+            <li><strong>1</strong><span>movie night plan</span></li>
+          </ul>
+        </div>
+
+        <div class="col-12 col-lg-6">
+          <div class="poster-stage" aria-label="Featured movie posters">
+            <img class="poster poster-left" src="https://image.tmdb.org/t/p/w500/oYuLEt3zVCKq57qu2F8dT7NIa6f.jpg" alt="Inception theatrical poster" width="500" height="750">
+            <img class="poster poster-main" src="https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg" alt="Interstellar theatrical poster" width="500" height="750">
+            <img class="poster poster-right" src="https://image.tmdb.org/t/p/w500/d5NXSklXo0qyIYkgV94XAgMIckC.jpg" alt="Dune theatrical poster" width="500" height="750">
+            <span class="poster-label">THIS WEEK'S PICKS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-section section-space">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow">START HERE</p><h2>Featured movies</h2></div>
+          <a class="text-link" href="movies.html">View the full collection</a>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="feature-card">
+              <img src="https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg" alt="Interstellar poster" width="500" height="750" loading="lazy">
+              <div class="feature-card-body"><span class="score">★ 9.0</span><p class="movie-year">2014 · SCI-FI / DRAMA</p><h3>Interstellar</h3><a href="movie-details.html#interstellar">View movie details</a></div>
+            </article>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="feature-card">
+              <img src="https://image.tmdb.org/t/p/w500/oYuLEt3zVCKq57qu2F8dT7NIa6f.jpg" alt="Inception poster" width="500" height="750" loading="lazy">
+              <div class="feature-card-body"><span class="score">★ 8.8</span><p class="movie-year">2010 · SCI-FI / THRILLER</p><h3>Inception</h3><a href="movie-details.html#inception">View movie details</a></div>
+            </article>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="feature-card">
+              <img src="https://image.tmdb.org/t/p/w500/d5NXSklXo0qyIYkgV94XAgMIckC.jpg" alt="Dune poster" width="500" height="750" loading="lazy">
+              <div class="feature-card-body"><span class="score">★ 8.2</span><p class="movie-year">2021 · SCI-FI / ADVENTURE</p><h3>Dune</h3><a href="movie-details.html#dune">View movie details</a></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="genres-section section-space">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">BROWSE BY MOOD</p><h2>Find your genre</h2></div></div>
+        <div class="genre-grid">
+          <a href="movies.html">Science fiction <span>01</span></a>
+          <a href="movies.html">Action <span>02</span></a>
+          <a href="movies.html">Drama <span>03</span></a>
+          <a href="movies.html">Animation <span>04</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="community-section container section-space">
+      <div class="community-panel">
+        <div><p class="eyebrow">YOUR TURN</p><h2>Share your opinion.</h2><p>Rate a film and add your own short review to the CineScope community page.</p></div>
+        <a class="btn btn-warning btn-lg px-4" href="reviews.html">Write a review</a>
+      </div>
+    </section>
   </main>
+
   <footer class="site-footer py-4">
-    <div class="container text-center">
-      <p class="mb-1">Contact: team@example.com</p>
-      <p class="mb-0">© 2026 CineScope · Social links</p>
+    <div class="container footer-content">
+      <div><a class="footer-brand" href="index.html">CineScope</a><p class="mb-0">Movie information, ratings, trailers, and reviews.</p></div>
+      <div class="footer-links"><a href="contact.html">Contact the team</a><a href="https://www.youtube.com/@WarnerBrosPictures" target="_blank" rel="noopener noreferrer">YouTube</a><a href="https://www.instagram.com/warnerbrosentertainment/" target="_blank" rel="noopener noreferrer">Instagram</a></div>
+      <p class="footer-copy mb-0">© 2026 CineScope. Student project.</p>
     </div>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 
