@@ -1,6 +1,729 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>CineScope | Movie Details</title><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/chingizkhan.css"></head>
-<body><header class="site-header"><nav class="site-navigation container py-3" aria-label="Main navigation"><a class="navbar-brand text-warning fw-bold" href="index.html">CineScope</a><div class="d-flex flex-wrap gap-3"><a class="text-white" href="index.html">Home</a><a class="text-white" href="movies.html">Movies</a><a class="text-white" href="movie-details.html">Details</a><a class="text-white" href="reviews.html">Reviews</a><a class="text-white" href="contact.html">Contact</a></div></nav></header><main class="placeholder-page container"><h1>Movie Details</h1><p>Chingizkhan will add movie information, rating, and trailer here.</p></main><footer class="site-footer py-4"><div class="container text-center"><p>© 2026 CineScope</p></div></footer><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script></body>
-</html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore the CineScope movie collection: posters, genres, sample ratings, film information and trailers.">
+  <title>CineScope | Movie Details</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/chingizkhan.css">
+</head>
+
+<body class="movie-page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="site-navigation container py-3" aria-label="Main navigation">
+      <a class="navbar-brand text-warning fw-bold" href="index.html">
+        CineScope<span class="brand-dot" aria-hidden="true">.</span>
+      </a>
+
+      <div class="d-flex flex-wrap gap-3">
+        <a class="text-white" href="index.html">Home</a>
+        <a class="text-white" href="movies.html">Movies</a>
+        <a class="text-white" href="movie-details.html" aria-current="page">Details</a>
+        <a class="text-white" href="reviews.html">Reviews</a>
+        <a class="text-white" href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" class="container details-main">
+    <a class="back-link" href="movies.html">← Back to the collection</a>
+
+    <header class="details-heading">
+      <p class="eyebrow">BEHIND THE POSTER</p>
+      <h1>Movie details</h1>
+      <p class="muted">Get to know the story. Then press play.</p>
+    </header>
+
+    <nav class="film-picker" aria-label="Choose a movie">
+      <a href="#interstellar">Interstellar</a>
+      <a href="#inception">Inception</a>
+      <a href="#dune">Dune</a>
+      <a href="#dark-knight">The Dark Knight</a>
+      <a href="#spirited-away">Spirited Away</a>
+      <a href="#spider-verse">Spider-Man: Into the Spider-Verse</a>
+    </nav>
+
+    <div class="film-profiles">
+
+      <article id="interstellar"
+               class="film-detail default-film"
+               aria-labelledby="interstellar-title">
+        <div class="row g-4 g-lg-5 align-items-start">
+          <div class="col-12 col-md-4">
+            <img class="detail-poster"
+                 src="https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg"
+                 alt="Interstellar theatrical poster"
+                 width="500"
+                 height="750"
+                 decoding="async"
+                 fetchpriority="high">
+          </div>
+
+          <div class="col-12 col-md-8">
+            <p class="eyebrow">IN FOCUS / 01</p>
+            <h2 id="interstellar-title" class="detail-title">Interstellar</h2>
+
+            <p class="detail-meta">
+              2014 <span aria-hidden="true">·</span> 169 min
+            </p>
+
+            <ul class="genre-tags mb-4" aria-label="Genres">
+              <li>Sci-Fi</li>
+              <li>Drama</li>
+            </ul>
+
+            <p class="detail-summary">
+              A pilot joins a mission beyond our solar system to find a future
+              for humanity, leaving his family behind on Earth.
+            </p>
+
+            <div class="film-facts">
+              <div>
+                <h3>Directed by</h3>
+                <p>Christopher Nolan</p>
+              </div>
+
+              <div>
+                <h3>Starring</h3>
+                <ul class="cast-list">
+                  <li>Matthew McConaughey</li>
+                  <li>Anne Hathaway</li>
+                  <li>Jessica Chastain</li>
+                </ul>
+              </div>
+
+              <div class="detail-rating">
+                <h3>CineScope demo rating</h3>
+                <p>
+                  <span aria-hidden="true">★</span>
+                  <strong>9.0</strong> / 10
+                </p>
+                <span class="small muted">
+                  Fixed sample score, not a live audience rating.
+                </span>
+              </div>
+            </div>
+
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <a class="btn btn-warning px-4" href="#trailer-interstellar">
+                Watch trailer <span aria-hidden="true">↓</span>
+              </a>
+              <a class="btn btn-outline-light px-4" href="reviews.html">
+                Read reviews
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <section id="trailer-interstellar"
+                 class="trailer-section"
+                 aria-labelledby="trailer-heading-interstellar">
+          <div class="collection-heading">
+            <h3 id="trailer-heading-interstellar">A first look</h3>
+            <span class="collection-label">TRAILER</span>
+          </div>
+
+          <div class="ratio ratio-16x9 trailer-frame">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/zSWdZVtXT7E"
+              title="Interstellar trailer"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <p class="trailer-caption">
+            Trailer unavailable here?
+            <a href="https://www.youtube.com/watch?v=zSWdZVtXT7E"
+               target="_blank" rel="noopener noreferrer">
+              Watch on YouTube
+              <span class="visually-hidden">(opens in a new tab)</span> ↗
+            </a>
+            <span aria-hidden="true">·</span>
+            <a href="https://www.paramountmovies.com/movies/interstellar"
+               target="_blank" rel="noopener noreferrer">
+              Film source
+              <span class="visually-hidden">(opens in a new tab)</span> ↗
+            </a>
+          </p>
+        </section>
+      </article>
+
+      <article id="inception"
+               class="film-detail"
+               aria-labelledby="inception-title">
+        <div class="row g-4 g-lg-5 align-items-start">
+          <div class="col-12 col-md-4">
+            <img class="detail-poster"
+                 src="https://image.tmdb.org/t/p/w500/oYuLEt3zVCKq57qu2F8dT7NIa6f.jpg"
+                 alt="Inception theatrical poster"
+                 width="500"
+                 height="750"
+                 decoding="async"
+                 loading="lazy">
+          </div>
+
+          <div class="col-12 col-md-8">
+            <p class="eyebrow">IN FOCUS / 02</p>
+            <h2 id="inception-title" class="detail-title">Inception</h2>
+
+            <p class="detail-meta">
+              2010 <span aria-hidden="true">·</span> 148 min
+            </p>
+
+            <ul class="genre-tags mb-4" aria-label="Genres">
+              <li>Sci-Fi</li>
+              <li>Thriller</li>
+            </ul>
+
+            <p class="detail-summary">
+              A dream thief takes on a different kind of job: planting an idea
+              inside a mind. Each layer of the dream makes returning home harder.
+            </p>
+
+            <div class="film-facts">
+              <div>
+                <h3>Directed by</h3>
+                <p>Christopher Nolan</p>
+              </div>
+
+              <div>
+                <h3>Starring</h3>
+                <ul class="cast-list">
+                  <li>Leonardo DiCaprio</li>
+                  <li>Joseph Gordon-Levitt</li>
+                  <li>Elliot Page</li>
+                </ul>
+              </div>
+
+              <div class="detail-rating">
+                <h3>CineScope demo rating</h3>
+                <p>
+                  <span aria-hidden="true">★</span>
+                  <strong>8.8</strong> / 10
+                </p>
+                <span class="small muted">
+                  Fixed sample score, not a live audience rating.
+                </span>
+              </div>
+            </div>
+
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <a class="btn btn-warning px-4" href="#trailer-inception">
+                Watch trailer <span aria-hidden="true">↓</span>
+              </a>
+              <a class="btn btn-outline-light px-4" href="reviews.html">
+                Read reviews
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <section id="trailer-inception"
+                 class="trailer-section"
+                 aria-labelledby="trailer-heading-inception">
+          <div class="collection-heading">
+            <h3 id="trailer-heading-inception">A first look</h3>
+            <span class="collection-label">TRAILER</span>
+          </div>
+
+          <div class="ratio ratio-16x9 trailer-frame">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/YoHD9XEInc0"
+              title="Inception trailer"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <p class="trailer-caption">
+            Trailer unavailable here?
+            <a href="https://www.youtube.com/watch?v=YoHD9XEInc0"
+               target="_blank" rel="noopener noreferrer">
+              Watch on YouTube
+              <span class="visually-hidden">(opens in a new tab)</span> ↗
+            </a>
+            <span aria-hidden="true">·</span>
+            <a href="https://www.warnerbros.com/movies/inception"
+               target="_blank" rel="noopener noreferrer">
+              Film source
+              <span class="visually-hidden">(opens in a new tab)</span> ↗
+            </a>
+          </p>
+        </section>
+      </article>
+
+      <article id="dune"
+               class="film-detail"
+               aria-labelledby="dune-title">
+        <div class="row g-4 g-lg-5 align-items-start">
+          <div class="col-12 col-md-4">
+            <img class="detail-poster"
+                 src="https://image.tmdb.org/t/p/w500/d5NXSklXo0qyIYkgV94XAgMIckC.jpg"
+                 alt="Dune theatrical poster"
+                 width="500"
+                 height="750"
+                 decoding="async"
+                 loading="lazy">
+          </div>
+
+          <div class="col-12 col-md-8">
+            <p class="eyebrow">IN FOCUS / 03</p>
+            <h2 id="dune-title" class="detail-title">Dune</h2>
+
+            <p class="detail-meta">
+              2021 <span aria-hidden="true">·</span> 155 min
+            </p>
+
+            <ul class="genre-tags mb-4" aria-label="Genres">
+              <li>Sci-Fi</li>
+              <li>Adventure</li>
+            </ul>
+
+            <p class="detail-summary">
+              Paul Atreides travels to the desert planet Arrakis, where his
+              family becomes caught in a struggle over a resource that shapes
+              the universe.
+            </p>
+
+            <div class="film-facts">
+              <div>
+                <h3>Directed by</h3>
+                <p>Denis Villeneuve</p>
+              </div>
+
+              <div>
+                <h3>Starring</h3>
+                <ul class="cast-list">
+                  <li>Timothée Chalamet</li>
+                  <li>Rebecca Ferguson</li>
+                  <li>Oscar Isaac</li>
+                </ul>
+              </div>
+
+              <div class="detail-rating">
+                <h3>CineScope demo rating</h3>
+                <p>
+                  <span aria-hidden="true">★</span>
+                  <strong>8.2</strong> / 10
+                </p>
+                <span class="small muted">
+                  Fixed sample score, not a live audience rating.
+                </span>
+              </div>
+            </div>
+
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <a class="btn btn-warning px-4" href="#trailer-dune">
+                Watch trailer <span aria-hidden="true">↓</span>
+              </a>
+              <a class="btn btn-outline-light px-4" href="reviews.html">
+                Read reviews
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <section id="trailer-dune"
+                 class="trailer-section"
+                 aria-labelledby="trailer-heading-dune">
+          <div class="collection-heading">
+            <h3 id="trailer-heading-dune">A first look</h3>
+            <span class="collection-label">TRAILER</span>
+          </div>
+
+          <div class="ratio ratio-16x9 trailer-frame">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/n9xhJrPXop4"
+              title="Dune trailer"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <p class="trailer-caption">
+            Trailer unavailable here?
+            <a href="https://www.youtube.com/watch?v=n9xhJrPXop4"
+               target="_blank" rel="noopener noreferrer">
+              Watch on YouTube
+              <span class="visually-hidden">(opens in a new tab)</span> ↗
+            </a>
+            <span aria-hidden="true">·</span>
+            <a href="https://www.legendary.com/film/dune/"
+               target="_blank" rel="noopener noreferrer">
+              Film source
+              <span class="visually-hidden">(opens in a new tab)</span> ↗
+            </a>
+          </p>
+        </section>
+      </article>
+
+      <article id="dark-knight"
+               class="film-detail"
+               aria-labelledby="dark-knight-title">
+        <div class="row g-4 g-lg-5 align-items-start">
+          <div class="col-12 col-md-4">
+            <img class="detail-poster"
+                 src="https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg"
+                 alt="The Dark Knight theatrical poster"
+                 width="500"
+                 height="750"
+                 decoding="async"
+                 loading="lazy">
+          </div>
+
+          <div class="col-12 col-md-8">
+            <p class="eyebrow">IN FOCUS / 04</p>
+            <h2 id="dark-knight-title" class="detail-title">The Dark Knight</h2>
+
+            <p class="detail-meta">
+              2008 <span aria-hidden="true">·</span> 152 min
+            </p>
+
+            <ul class="genre-tags mb-4" aria-label="Genres">
+              <li>Action</li>
+              <li>Crime</li>
+            </ul>
+
+            <p class="detail-summary">
+              Batman faces the Joker, whose campaign of chaos tests Gotham
+              and forces its protectors to confront difficult choices.
+            </p>
+
+            <div class="film-facts">
+              <div>
+                <h3>Directed by</h3>
+                <p>Christopher Nolan</p>
+              </div>
+
+              <div>
+                <h3>Starring</h3>
+                <ul class="cast-list">
+                  <li>Christian Bale</li>
+                  <li>Heath Ledger</li>
+                  <li>Aaron Eckhart</li>
+                </ul>
+              </div>
+
+              <div class="detail-rating">
+                <h3>CineScope demo rating</h3>
+                <p>
+                  <span aria-hidden="true">★</span>
+                  <strong>9.1</strong> / 10
+                </p>
+                <span class="small muted">
+                  Fixed sample score, not a live audience rating.
+                </span>
+              </div>
+            </div>
+
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <a class="btn btn-warning px-4" href="#trailer-dark-knight">
+                Watch trailer <span aria-hidden="true">↓</span>
+              </a>
+              <a class="btn btn-outline-light px-4" href="reviews.html">
+                Read reviews
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <section id="trailer-dark-knight"
+                 class="trailer-section"
+                 aria-labelledby="trailer-heading-dark-knight">
+          <div class="collection-heading">
+            <h3 id="trailer-heading-dark-knight">A first look</h3>
+            <span class="collection-label">TRAILER</span>
+          </div>
+
+          <div class="ratio ratio-16x9 trailer-frame">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/EXeTwQWrcwY"
+              title="The Dark Knight trailer"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <p class="trailer-caption">
+            Trailer unavailable here?
+            <a href="https://www.youtube.com/watch?v=EXeTwQWrcwY"
+               target="_blank" rel="noopener noreferrer">
+              Watch on YouTube
+              <span class="visually-hidden">(opens in a new tab)</span> ↗
+            </a>
+            <span aria-hidden="true">·</span>
+            <a href="https://www.warnerbros.com/movies/dark-knight"
+               target="_blank" rel="noopener noreferrer">
+              Film source
+              <span class="visually-hidden">(opens in a new tab)</span> ↗
+            </a>
+          </p>
+        </section>
+      </article>
+
+      <article id="spirited-away"
+               class="film-detail"
+               aria-labelledby="spirited-away-title">
+        <div class="row g-4 g-lg-5 align-items-start">
+          <div class="col-12 col-md-4">
+            <img class="detail-poster"
+                 src="https://image.tmdb.org/t/p/w500/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg"
+                 alt="Spirited Away theatrical poster"
+                 width="500"
+                 height="750"
+                 decoding="async"
+                 loading="lazy">
+          </div>
+
+          <div class="col-12 col-md-8">
+            <p class="eyebrow">IN FOCUS / 05</p>
+            <h2 id="spirited-away-title" class="detail-title">Spirited Away</h2>
+
+            <p class="detail-meta">
+              2001 <span aria-hidden="true">·</span> 125 min
+            </p>
+
+            <ul class="genre-tags mb-4" aria-label="Genres">
+              <li>Animation</li>
+              <li>Fantasy</li>
+            </ul>
+
+            <p class="detail-summary">
+              Chihiro enters a world of spirits and must find the courage
+              to help her parents and return home.
+            </p>
+
+            <div class="film-facts">
+              <div>
+                <h3>Directed by</h3>
+                <p>Hayao Miyazaki</p>
+              </div>
+
+              <div>
+                <h3>Starring</h3>
+                <ul class="cast-list">
+                  <li>Rumi Hiiragi</li>
+                  <li>Miyu Irino</li>
+                  <li>Mari Natsuki</li>
+                </ul>
+              </div>
+
+              <div class="detail-rating">
+                <h3>CineScope demo rating</h3>
+                <p>
+                  <span aria-hidden="true">★</span>
+                  <strong>8.7</strong> / 10
+                </p>
+                <span class="small muted">
+                  Fixed sample score, not a live audience rating.
+                </span>
+              </div>
+            </div>
+
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <a class="btn btn-warning px-4" href="#trailer-spirited-away">
+                Watch trailer <span aria-hidden="true">↓</span>
+              </a>
+              <a class="btn btn-outline-light px-4" href="reviews.html">
+                Read reviews
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <section id="trailer-spirited-away"
+                 class="trailer-section"
+                 aria-labelledby="trailer-heading-spirited-away">
+          <div class="collection-heading">
+            <h3 id="trailer-heading-spirited-away">A first look</h3>
+            <span class="collection-label">TRAILER</span>
+          </div>
+
+          <div class="ratio ratio-16x9 trailer-frame">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/fDUFP7EeXLE"
+              title="Spirited Away trailer"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <p class="trailer-caption">
+            Trailer unavailable here?
+            <a href="https://www.youtube.com/watch?v=fDUFP7EeXLE"
+               target="_blank" rel="noopener noreferrer">
+              Watch on YouTube
+              <span class="visually-hidden">(opens in a new tab)</span> ↗
+            </a>
+            <span aria-hidden="true">·</span>
+            <a href="https://gkids.com/films/spirited-away/"
+               target="_blank" rel="noopener noreferrer">
+              Film source
+              <span class="visually-hidden">(opens in a new tab)</span> ↗
+            </a>
+          </p>
+        </section>
+      </article>
+
+      <article id="spider-verse"
+               class="film-detail"
+               aria-labelledby="spider-verse-title">
+        <div class="row g-4 g-lg-5 align-items-start">
+          <div class="col-12 col-md-4">
+            <img class="detail-poster"
+                 src="https://image.tmdb.org/t/p/w500/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg"
+                 alt="Spider-Man: Into the Spider-Verse theatrical poster"
+                 width="500"
+                 height="750"
+                 decoding="async"
+                 loading="lazy">
+          </div>
+
+          <div class="col-12 col-md-8">
+            <p class="eyebrow">IN FOCUS / 06</p>
+
+            <h2 id="spider-verse-title" class="detail-title">
+              Spider-Man: Into the Spider-Verse
+            </h2>
+
+            <p class="detail-meta">
+              2018 <span aria-hidden="true">·</span> 117 min
+            </p>
+
+            <ul class="genre-tags mb-4" aria-label="Genres">
+              <li>Animation</li>
+              <li>Action</li>
+            </ul>
+
+            <p class="detail-summary">
+              Miles Morales discovers his powers and meets Spider-People
+              from other dimensions as they work together to protect his world.
+            </p>
+
+            <div class="film-facts">
+              <div>
+                <h3>Directed by</h3>
+                <p>Bob Persichetti, Peter Ramsey, Rodney Rothman</p>
+              </div>
+
+              <div>
+                <h3>Starring</h3>
+                <ul class="cast-list">
+                  <li>Shameik Moore</li>
+                  <li>Jake Johnson</li>
+                  <li>Hailee Steinfeld</li>
+                </ul>
+              </div>
+
+              <div class="detail-rating">
+                <h3>CineScope demo rating</h3>
+                <p>
+                  <span aria-hidden="true">★</span>
+                  <strong>8.6</strong> / 10
+                </p>
+                <span class="small muted">
+                  Fixed sample score, not a live audience rating.
+                </span>
+              </div>
+            </div>
+
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <a class="btn btn-warning px-4" href="#trailer-spider-verse">
+                Watch trailer <span aria-hidden="true">↓</span>
+              </a>
+              <a class="btn btn-outline-light px-4" href="reviews.html">
+                Read reviews
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <section id="trailer-spider-verse"
+                 class="trailer-section"
+                 aria-labelledby="trailer-heading-spider-verse">
+          <div class="collection-heading">
+            <h3 id="trailer-heading-spider-verse">A first look</h3>
+            <span class="collection-label">TRAILER</span>
+          </div>
+
+          <div class="ratio ratio-16x9 trailer-frame">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/ii3n7hYQOl4"
+              title="Spider-Man: Into the Spider-Verse trailer"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <p class="trailer-caption">
+            Trailer unavailable here?
+            <a href="https://www.youtube.com/watch?v=ii3n7hYQOl4"
+               target="_blank" rel="noopener noreferrer">
+              Watch on YouTube
+              <span class="visually-hidden">(opens in a new tab)</span> ↗
+            </a>
+            <span aria-hidden="true">·</span>
+            <a href="https://www.sonypictures.com/movies/spidermanintothespiderverse"
+               target="_blank" rel="noopener noreferrer">
+              Film source
+              <span class="visually-hidden">(opens in a new tab)</span> ↗
+            </a>
+          </p>
+        </section>
+      </article>
+
+    </div>
+  </main>
+
+  <footer class="site-footer py-4">
+    <div class="container footer-content">
+      <div>
+        <a class="footer-brand" href="index.html">CineScope</a>
+        <p class="mb-0">A little inspiration for your next movie night.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="contact.html">Contact the team</a>
+
+        <a href="https://www.youtube.com/@WarnerBrosPictures"
+           target="_blank"
+           rel="noopener noreferrer">
+          YouTube
+          <span class="visually-hidden">(opens in a new tab)</span>
+        </a>
+
+        <a href="https://www.instagram.com/warnerbrosentertainment/"
+           target="_blank"
+           rel="noopener noreferrer">
+          Instagram
+          <span class="visually-hidden">(opens in a new tab)</span>
+        </a>
+      </div>
+
+      <p class="mb-0 copyright">© 2026 CineScope · Student project</p>
+    </div>
+  </footer>
+</body>
+</html>

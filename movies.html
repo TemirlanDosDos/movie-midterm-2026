@@ -1,6 +1,411 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>CineScope | Movies</title><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/chingizkhan.css"></head>
-<body><header class="site-header"><nav class="site-navigation container py-3" aria-label="Main navigation"><a class="navbar-brand text-warning fw-bold" href="index.html">CineScope</a><div class="d-flex flex-wrap gap-3"><a class="text-white" href="index.html">Home</a><a class="text-white" href="movies.html">Movies</a><a class="text-white" href="movie-details.html">Details</a><a class="text-white" href="reviews.html">Reviews</a><a class="text-white" href="contact.html">Contact</a></div></nav></header><main class="placeholder-page container"><h1>Movies</h1><p>Chingizkhan will build the responsive movie catalog here.</p></main><footer class="site-footer py-4"><div class="container text-center"><p>© 2026 CineScope</p></div></footer><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script></body>
-</html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore the CineScope movie collection: posters, genres, sample ratings, film information and trailers.">
+  <title>CineScope | Movies</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/chingizkhan.css">
+</head>
+
+<body class="movie-page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="site-navigation container py-3" aria-label="Main navigation">
+      <a class="navbar-brand text-warning fw-bold" href="index.html">
+        CineScope<span class="brand-dot" aria-hidden="true">.</span>
+      </a>
+
+      <div class="d-flex flex-wrap gap-3">
+        <a class="text-white" href="index.html">Home</a>
+        <a class="text-white" href="movies.html" aria-current="page">Movies</a>
+        <a class="text-white" href="movie-details.html">Details</a>
+        <a class="text-white" href="reviews.html">Reviews</a>
+        <a class="text-white" href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" class="container catalog-main">
+    <section class="catalog-intro" aria-labelledby="catalog-title">
+      <div>
+        <p class="eyebrow">THE CINESCOPE COLLECTION</p>
+
+        <h1 id="catalog-title">
+          Find your next<br>
+          <span>great watch.</span>
+        </h1>
+
+        <p class="intro-copy">
+          Other worlds. Unforgettable characters. Stories worth staying up for.
+          <br class="desktop-break">
+          Explore six films picked for your next movie night.
+        </p>
+      </div>
+
+      <div class="collection-stamp">
+        <span class="stamp-number">06</span>
+        <span>FILMS TO DISCOVER</span>
+      </div>
+    </section>
+
+    <section aria-labelledby="collection-title">
+      <div class="collection-heading">
+        <h2 id="collection-title">The movie shelf</h2>
+        <span class="collection-label">SCI-FI / ACTION / ANIMATION</span>
+      </div>
+
+      <p class="rating-note">
+        ★ Ratings are fixed demonstration scores out of 10 for this student project.
+      </p>
+
+      <div class="row g-4 movie-grid">
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="movie-card">
+            <a class="poster-link"
+               href="movie-details.html#interstellar"
+               aria-label="View details for Interstellar">
+              <img
+                src="https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg"
+                alt="Interstellar theatrical poster"
+                width="500"
+                height="750"
+                fetchpriority="high"
+                decoding="async">
+
+              <span class="rating-badge">
+                <span aria-hidden="true">★</span> 9.0
+                <span class="visually-hidden">out of 10, demo rating</span>
+              </span>
+
+              <span class="poster-cta" aria-hidden="true">Explore film ↗</span>
+            </a>
+
+            <div class="movie-card-body">
+              <p class="movie-meta">
+                2014 <span aria-hidden="true">·</span> 169 min
+              </p>
+
+              <h2>
+                <a href="movie-details.html#interstellar">Interstellar</a>
+              </h2>
+
+              <ul class="genre-tags" aria-label="Genres">
+                <li>Sci-Fi</li>
+                <li>Drama</li>
+              </ul>
+
+              <p class="movie-note">
+                For a night of big questions and even bigger worlds.
+              </p>
+
+              <a class="card-details" href="movie-details.html#interstellar">
+                View details
+                <span aria-hidden="true">→</span>
+                <span class="visually-hidden">for Interstellar</span>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="movie-card">
+            <a class="poster-link"
+               href="movie-details.html#inception"
+               aria-label="View details for Inception">
+              <img
+                src="https://image.tmdb.org/t/p/w500/oYuLEt3zVCKq57qu2F8dT7NIa6f.jpg"
+                alt="Inception theatrical poster"
+                width="500"
+                height="750"
+                loading="lazy"
+                decoding="async">
+
+              <span class="rating-badge">
+                <span aria-hidden="true">★</span> 8.8
+                <span class="visually-hidden">out of 10, demo rating</span>
+              </span>
+
+              <span class="poster-cta" aria-hidden="true">Explore film ↗</span>
+            </a>
+
+            <div class="movie-card-body">
+              <p class="movie-meta">
+                2010 <span aria-hidden="true">·</span> 148 min
+              </p>
+
+              <h2>
+                <a href="movie-details.html#inception">Inception</a>
+              </h2>
+
+              <ul class="genre-tags" aria-label="Genres">
+                <li>Sci-Fi</li>
+                <li>Thriller</li>
+              </ul>
+
+              <p class="movie-note">
+                A puzzle that stays with you after the credits.
+              </p>
+
+              <a class="card-details" href="movie-details.html#inception">
+                View details
+                <span aria-hidden="true">→</span>
+                <span class="visually-hidden">for Inception</span>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="movie-card">
+            <a class="poster-link"
+               href="movie-details.html#dune"
+               aria-label="View details for Dune">
+              <img
+                src="https://image.tmdb.org/t/p/w500/d5NXSklXo0qyIYkgV94XAgMIckC.jpg"
+                alt="Dune theatrical poster"
+                width="500"
+                height="750"
+                loading="lazy"
+                decoding="async">
+
+              <span class="rating-badge">
+                <span aria-hidden="true">★</span> 8.2
+                <span class="visually-hidden">out of 10, demo rating</span>
+              </span>
+
+              <span class="poster-cta" aria-hidden="true">Explore film ↗</span>
+            </a>
+
+            <div class="movie-card-body">
+              <p class="movie-meta">
+                2021 <span aria-hidden="true">·</span> 155 min
+              </p>
+
+              <h2>
+                <a href="movie-details.html#dune">Dune</a>
+              </h2>
+
+              <ul class="genre-tags" aria-label="Genres">
+                <li>Sci-Fi</li>
+                <li>Adventure</li>
+              </ul>
+
+              <p class="movie-note">
+                Desert landscapes, political intrigue, and a sweeping score.
+              </p>
+
+              <a class="card-details" href="movie-details.html#dune">
+                View details
+                <span aria-hidden="true">→</span>
+                <span class="visually-hidden">for Dune</span>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="movie-card">
+            <a class="poster-link"
+               href="movie-details.html#dark-knight"
+               aria-label="View details for The Dark Knight">
+              <img
+                src="https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg"
+                alt="The Dark Knight theatrical poster"
+                width="500"
+                height="750"
+                loading="lazy"
+                decoding="async">
+
+              <span class="rating-badge">
+                <span aria-hidden="true">★</span> 9.1
+                <span class="visually-hidden">out of 10, demo rating</span>
+              </span>
+
+              <span class="poster-cta" aria-hidden="true">Explore film ↗</span>
+            </a>
+
+            <div class="movie-card-body">
+              <p class="movie-meta">
+                2008 <span aria-hidden="true">·</span> 152 min
+              </p>
+
+              <h2>
+                <a href="movie-details.html#dark-knight">The Dark Knight</a>
+              </h2>
+
+              <ul class="genre-tags" aria-label="Genres">
+                <li>Action</li>
+                <li>Crime</li>
+              </ul>
+
+              <p class="movie-note">
+                A tense crime story set in the streets of Gotham.
+              </p>
+
+              <a class="card-details" href="movie-details.html#dark-knight">
+                View details
+                <span aria-hidden="true">→</span>
+                <span class="visually-hidden">for The Dark Knight</span>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Spirited Away -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="movie-card">
+            <a class="poster-link"
+               href="movie-details.html#spirited-away"
+               aria-label="View details for Spirited Away">
+              <img
+                src="https://image.tmdb.org/t/p/w500/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg"
+                alt="Spirited Away theatrical poster"
+                width="500"
+                height="750"
+                loading="lazy"
+                decoding="async">
+
+              <span class="rating-badge">
+                <span aria-hidden="true">★</span> 8.7
+                <span class="visually-hidden">out of 10, demo rating</span>
+              </span>
+
+              <span class="poster-cta" aria-hidden="true">Explore film ↗</span>
+            </a>
+
+            <div class="movie-card-body">
+              <p class="movie-meta">
+                2001 <span aria-hidden="true">·</span> 125 min
+              </p>
+
+              <h2>
+                <a href="movie-details.html#spirited-away">Spirited Away</a>
+              </h2>
+
+              <ul class="genre-tags" aria-label="Genres">
+                <li>Animation</li>
+                <li>Fantasy</li>
+              </ul>
+
+              <p class="movie-note">
+                An imaginative journey full of wonder and heart.
+              </p>
+
+              <a class="card-details" href="movie-details.html#spirited-away">
+                View details
+                <span aria-hidden="true">→</span>
+                <span class="visually-hidden">for Spirited Away</span>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Spider-Man -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="movie-card">
+            <a class="poster-link"
+               href="movie-details.html#spider-verse"
+               aria-label="View details for Spider-Man: Into the Spider-Verse">
+              <img
+                src="https://image.tmdb.org/t/p/w500/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg"
+                alt="Spider-Man: Into the Spider-Verse theatrical poster"
+                width="500"
+                height="750"
+                loading="lazy"
+                decoding="async">
+
+              <span class="rating-badge">
+                <span aria-hidden="true">★</span> 8.6
+                <span class="visually-hidden">out of 10, demo rating</span>
+              </span>
+
+              <span class="poster-cta" aria-hidden="true">Explore film ↗</span>
+            </a>
+
+            <div class="movie-card-body">
+              <p class="movie-meta">
+                2018 <span aria-hidden="true">·</span> 117 min
+              </p>
+
+              <h2>
+                <a href="movie-details.html#spider-verse">
+                  Spider-Man: Into the Spider-Verse
+                </a>
+              </h2>
+
+              <ul class="genre-tags" aria-label="Genres">
+                <li>Animation</li>
+                <li>Action</li>
+              </ul>
+
+              <p class="movie-note">
+                Comic-book energy with a story about finding your own voice.
+              </p>
+
+              <a class="card-details" href="movie-details.html#spider-verse">
+                View details
+                <span aria-hidden="true">→</span>
+                <span class="visually-hidden">
+                  for Spider-Man: Into the Spider-Verse
+                </span>
+              </a>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <aside class="catalog-outro" aria-labelledby="outro-title">
+      <div>
+        <p class="eyebrow">THE CONVERSATION CONTINUES</p>
+        <h2 id="outro-title">Seen something you loved?</h2>
+        <p class="mb-0">Visit the reviews page and share your take.</p>
+      </div>
+
+      <a class="btn btn-warning px-4 py-3" href="reviews.html">
+        Explore reviews <span aria-hidden="true">↗</span>
+      </a>
+    </aside>
+  </main>
+
+  <footer class="site-footer py-4">
+    <div class="container footer-content">
+      <div>
+        <a class="footer-brand" href="index.html">CineScope</a>
+        <p class="mb-0">A little inspiration for your next movie night.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="contact.html">Contact the team</a>
+
+        <a href="https://www.youtube.com/@WarnerBrosPictures"
+           target="_blank"
+           rel="noopener noreferrer">
+          YouTube
+          <span class="visually-hidden">(opens in a new tab)</span>
+        </a>
+
+        <a href="https://www.instagram.com/warnerbrosentertainment/"
+           target="_blank"
+           rel="noopener noreferrer">
+          Instagram
+          <span class="visually-hidden">(opens in a new tab)</span>
+        </a>
+      </div>
+
+      <p class="mb-0 copyright">© 2026 CineScope · Student project</p>
+    </div>
+  </footer>
+</body>
+</html>
