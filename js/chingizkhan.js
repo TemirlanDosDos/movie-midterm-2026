@@ -1,10 +1,9 @@
 $(document).ready(function () {
-  // Movies page: a card must match both the title and the selected genre.
-  let genre = "all";
   const search = $("#movie-search");
   const filters = $("#genre-filters button");
 
   function filterMovies() {
+    const genre = $("#genre-filters .active").text().toLowerCase();
     const query = search.val().trim().toLowerCase();
     let count = 0;
 
@@ -13,8 +12,6 @@ $(document).ready(function () {
       const title = card.find("h2").text().toLowerCase();
       const matchesGenre = genre === "all" || card.hasClass(genre);
       const matches = title.includes(query) && matchesGenre;
-
-      // Hide the Bootstrap column too, so the grid has no empty spaces.
       card.parent().toggle(matches);
       if (matches) count++;
     });
@@ -24,14 +21,12 @@ $(document).ready(function () {
 
   search.on("input", filterMovies);
   filters.on("click", function () {
-    genre = $(this).text().toLowerCase();
     filters.removeClass("active").attr("aria-pressed", "false");
     $(this).addClass("active").attr("aria-pressed", "true");
     filterMovies();
   });
   if (search.length) filterMovies();
 
-  // Details page: current is the position of the open picture.
   const pictures = $(".film-still");
   const lightbox = $("#film-lightbox");
   let current = 0;
@@ -40,7 +35,9 @@ $(document).ready(function () {
   function showPicture() {
     const picture = pictures.eq(current);
     const image = picture.find("img");
-    $("#lightbox-image").attr("src", image.attr("src")).attr("alt", image.attr("alt"));
+    const largeImage = $("#lightbox-image");
+    largeImage.attr("src", image.attr("src"));
+    largeImage.attr("alt", image.attr("alt"));
     $("#lightbox-caption").text(picture.find("span").text());
   }
 
