@@ -695,6 +695,58 @@
       </article>
 
     </div>
+    <section class="my-5" aria-labelledby="gallery-title">
+      <h2 id="gallery-title">Film stills</h2>
+      <div class="row g-3">
+        <div class="col-6 col-md-4">
+          <button type="button" class="film-still" aria-label="Enlarge trailer still from Interstellar">
+            <img src="https://i.ytimg.com/vi/zSWdZVtXT7E/hq2.jpg" alt="Trailer still from Interstellar" loading="lazy" width="480" height="360">
+            <span>Interstellar</span>
+          </button>
+        </div>
+        <div class="col-6 col-md-4">
+          <button type="button" class="film-still" aria-label="Enlarge trailer still from Inception">
+            <img src="https://i.ytimg.com/vi/YoHD9XEInc0/hq2.jpg" alt="Trailer still from Inception" loading="lazy" width="480" height="360">
+            <span>Inception</span>
+          </button>
+        </div>
+        <div class="col-6 col-md-4">
+          <button type="button" class="film-still" aria-label="Enlarge trailer still from Dune">
+            <img src="https://i.ytimg.com/vi/n9xhJrPXop4/hq2.jpg" alt="Trailer still from Dune" loading="lazy" width="480" height="360">
+            <span>Dune</span>
+          </button>
+        </div>
+        <div class="col-6 col-md-4">
+          <button type="button" class="film-still" aria-label="Enlarge trailer still from The Dark Knight">
+            <img src="https://i.ytimg.com/vi/EXeTwQWrcwY/hq2.jpg" alt="Trailer still from The Dark Knight" loading="lazy" width="480" height="360">
+            <span>The Dark Knight</span>
+          </button>
+        </div>
+        <div class="col-6 col-md-4">
+          <button type="button" class="film-still" aria-label="Enlarge trailer still from Spirited Away">
+            <img src="https://i.ytimg.com/vi/fDUFP7EeXLE/hq2.jpg" alt="Trailer still from Spirited Away" loading="lazy" width="480" height="360">
+            <span>Spirited Away</span>
+          </button>
+        </div>
+        <div class="col-6 col-md-4">
+          <button type="button" class="film-still" aria-label="Enlarge trailer still from Spider-Man: Into the Spider-Verse">
+            <img src="https://i.ytimg.com/vi/ii3n7hYQOl4/hq2.jpg" alt="Trailer still from Spider-Man: Into the Spider-Verse" loading="lazy" width="480" height="360">
+            <span>Spider-Man: Into the Spider-Verse</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <dialog id="film-lightbox" aria-label="Film still viewer">
+      <div class="lightbox-panel">
+        <button type="button" id="close-lightbox" class="btn btn-outline-light" autofocus>Close</button>
+        <img id="lightbox-image" alt="">
+        <div class="lightbox-controls">
+          <button type="button" id="previous-still" class="btn btn-outline-light" aria-label="Previous image">←</button>
+          <span id="lightbox-caption" aria-live="polite"></span>
+          <button type="button" id="next-still" class="btn btn-outline-light" aria-label="Next image">→</button>
+        </div>
+      </div>
+    </dialog>
   </main>
 
   <footer class="site-footer py-4">
@@ -725,5 +777,7 @@
       <p class="mb-0 copyright">© 2026 CineScope · Student project</p>
     </div>
   </footer>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/chingizkhan.js"></script>
 </body>
 </html>

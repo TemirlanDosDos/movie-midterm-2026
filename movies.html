@@ -67,10 +67,21 @@
         ★ Ratings are fixed demonstration scores out of 10 for this student project.
       </p>
 
+      <label class="form-label" for="movie-search">Search movies by title</label>
+      <input type="search" id="movie-search" class="form-control mb-3" autocomplete="off">
+      <div id="genre-filters" class="d-flex flex-wrap gap-2 mb-4" role="group" aria-label="Filter by genre">
+        <button type="button" class="btn btn-outline-warning active" aria-pressed="true">All</button>
+        <button type="button" class="btn btn-outline-warning" aria-pressed="false">Sci-Fi</button>
+        <button type="button" class="btn btn-outline-warning" aria-pressed="false">Action</button>
+        <button type="button" class="btn btn-outline-warning" aria-pressed="false">Drama</button>
+        <button type="button" class="btn btn-outline-warning" aria-pressed="false">Animation</button>
+      </div>
+      <p id="no-movies" role="status" hidden>No movies found</p>
+
       <div class="row g-4 movie-grid">
 
         <div class="col-12 col-sm-6 col-lg-4">
-          <article class="movie-card">
+          <article class="movie-card sci-fi drama">
             <a class="poster-link"
                href="movie-details.html#interstellar"
                aria-label="View details for Interstellar">
@@ -118,7 +129,7 @@
         </div>
 
         <div class="col-12 col-sm-6 col-lg-4">
-          <article class="movie-card">
+          <article class="movie-card sci-fi thriller">
             <a class="poster-link"
                href="movie-details.html#inception"
                aria-label="View details for Inception">
@@ -166,7 +177,7 @@
         </div>
 
         <div class="col-12 col-sm-6 col-lg-4">
-          <article class="movie-card">
+          <article class="movie-card sci-fi adventure">
             <a class="poster-link"
                href="movie-details.html#dune"
                aria-label="View details for Dune">
@@ -214,7 +225,7 @@
         </div>
 
         <div class="col-12 col-sm-6 col-lg-4">
-          <article class="movie-card">
+          <article class="movie-card action crime">
             <a class="poster-link"
                href="movie-details.html#dark-knight"
                aria-label="View details for The Dark Knight">
@@ -261,9 +272,8 @@
           </article>
         </div>
 
-        <!-- Spirited Away -->
         <div class="col-12 col-sm-6 col-lg-4">
-          <article class="movie-card">
+          <article class="movie-card animation fantasy">
             <a class="poster-link"
                href="movie-details.html#spirited-away"
                aria-label="View details for Spirited Away">
@@ -310,9 +320,8 @@
           </article>
         </div>
 
-        <!-- Spider-Man -->
         <div class="col-12 col-sm-6 col-lg-4">
-          <article class="movie-card">
+          <article class="movie-card animation action">
             <a class="poster-link"
                href="movie-details.html#spider-verse"
                aria-label="View details for Spider-Man: Into the Spider-Verse">
@@ -407,5 +416,7 @@
       <p class="mb-0 copyright">© 2026 CineScope · Student project</p>
     </div>
   </footer>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/chingizkhan.js"></script>
 </body>
 </html>
