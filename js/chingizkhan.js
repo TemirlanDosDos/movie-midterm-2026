@@ -1,77 +1,86 @@
-$(function () {
+$(document).ready(function () {
+  // Movies page: a card must match both the title and the selected genre.
+  let genre = "all";
   const search = $("#movie-search");
-  if (search.length) {
-    const cards = $(".movie-grid .movie-card");
-    const buttons = $("#genre-filters button");
-    let selectedGenre = "All";
+  const filters = $("#genre-filters button");
 
-    function updateCatalog() {
-      const query = search.val().trim().toLowerCase();
-      let matches = 0;
-      cards.each(function () {
-        const card = $(this);
-        const title = card.find("h2").text().trim().toLowerCase();
-        const genres = card.find(".genre-tags li").map(function () {
-          return $(this).text().trim().toLowerCase();
-        }).get();
-        const visible = title.includes(query) &&
-          (selectedGenre === "All" || genres.includes(selectedGenre.toLowerCase()));
-        card.parent().prop("hidden", !visible);
-        if (visible) matches++;
-      });
-      $("#no-movies").prop("hidden", matches > 0);
-    }
+  function filterMovies() {
+    const query = search.val().trim().toLowerCase();
+    let count = 0;
 
-    search.on("input", updateCatalog);
-    buttons.on("click", function () {
-      selectedGenre = this.dataset.genre;
-      buttons.removeClass("active").attr("aria-pressed", "false");
-      $(this).addClass("active").attr("aria-pressed", "true");
-      updateCatalog();
+    $(".movie-card").each(function () {
+      const card = $(this);
+      const title = card.find("h2").text().toLowerCase();
+      const matchesGenre = genre === "all" || card.hasClass(genre);
+      const matches = title.includes(query) && matchesGenre;
+
+      // Hide the Bootstrap column too, so the grid has no empty spaces.
+      card.parent().toggle(matches);
+      if (matches) count++;
     });
-    updateCatalog();
+
+    $("#no-movies").prop("hidden", count > 0);
   }
 
-  const dialog = document.getElementById("film-lightbox");
-  if (!dialog) return;
+  search.on("input", filterMovies);
+  filters.on("click", function () {
+    genre = $(this).text().toLowerCase();
+    filters.removeClass("active").attr("aria-pressed", "false");
+    $(this).addClass("active").attr("aria-pressed", "true");
+    filterMovies();
+  });
+  if (search.length) filterMovies();
 
-  const stills = $(".film-still");
-  const viewer = $(dialog);
+  // Details page: current is the position of the open picture.
+  const pictures = $(".film-still");
+  const lightbox = $("#film-lightbox");
   let current = 0;
-  const duration = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 200;
+  const speed = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 200;
 
-  function showStill(index) {
-    current = (index + stills.length) % stills.length;
-    const button = stills.eq(current);
-    const img = button.find("img")[0];
-    $("#lightbox-image").attr({ src: img.src, alt: img.alt });
-    $("#lightbox-caption").text(button.find("span").text());
+  function showPicture() {
+    const picture = pictures.eq(current);
+    const image = picture.find("img");
+    $("#lightbox-image").attr("src", image.attr("src")).attr("alt", image.attr("alt"));
+    $("#lightbox-caption").text(picture.find("span").text());
   }
 
-  function closeViewer() {
-    viewer.stop(true, true).fadeOut(duration, function () {
-      dialog.close();
-      viewer.css("display", "");
+  function previous() {
+    current--;
+    if (current < 0) current = pictures.length - 1;
+    showPicture();
+  }
+
+  function next() {
+    current++;
+    if (current === pictures.length) current = 0;
+    showPicture();
+  }
+
+  pictures.on("click", function () {
+    current = pictures.index(this);
+    showPicture();
+    lightbox[0].showModal();
+    lightbox.hide().fadeIn(speed);
+  });
+
+  function closeGallery() {
+    lightbox.stop(true).fadeOut(speed, function () {
+      lightbox[0].close();
     });
   }
 
-  stills.on("click", function () {
-    showStill(stills.index(this));
-    dialog.showModal();
-    viewer.hide().fadeIn(duration);
+  $("#previous-still").on("click", previous);
+  $("#next-still").on("click", next);
+  $("#close-lightbox").on("click", closeGallery);
+  lightbox.on("click", function (event) {
+    if (event.target === this) closeGallery();
   });
-  $("#previous-still").on("click", function () { showStill(current - 1); });
-  $("#next-still").on("click", function () { showStill(current + 1); });
-  $("#close-lightbox").on("click", closeViewer);
-  viewer.on("cancel", function (event) {
+  lightbox.on("cancel", function (event) {
     event.preventDefault();
-    closeViewer();
+    closeGallery();
   });
-  viewer.on("click", function (event) {
-    if (event.target === dialog) closeViewer();
-  });
-  viewer.on("keydown", function (event) {
-    if (event.key === "ArrowLeft") showStill(current - 1);
-    if (event.key === "ArrowRight") showStill(current + 1);
+  lightbox.on("keydown", function (event) {
+    if (event.key === "ArrowLeft") previous();
+    if (event.key === "ArrowRight") next();
   });
 });
