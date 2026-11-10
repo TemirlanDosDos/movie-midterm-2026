@@ -1,4 +1,3 @@
-// Keep watchlist variables separate from the team's other scripts.
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('watchlist-form');
     const tableBody = document.getElementById('watchlist-body');
@@ -91,7 +90,6 @@ document.addEventListener('DOMContentLoaded', function () {
             const movie = movies[i];
             const row = document.createElement('tr');
             if (movie.id === editingId) {
-                // Only fixed markup goes into innerHTML. Movie text uses .value below.
                 row.innerHTML = '<td><input id="watchlist-edit-title" aria-label="Edit movie title" required></td>' +
                     '<td><input id="watchlist-edit-genre" aria-label="Edit genre" required></td>' +
                     '<td><input id="watchlist-edit-rating" aria-label="Edit rating" type="number" min="1" max="10" step="any" required></td>' +
