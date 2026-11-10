@@ -312,6 +312,49 @@ textarea:focus-visible {
   border-radius: var(--page-radius);
 }
 
+.registration-section {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  gap: clamp(2rem, 7vw, 6rem);
+  padding-top: 6rem;
+}
+
+.registration-copy > p:not(.eyebrow) { color: var(--color-muted); }
+
+.registration-form {
+  padding: clamp(1.5rem, 5vw, 3rem);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--page-radius);
+}
+
+.field-feedback {
+  min-height: 1.4rem;
+  margin-top: .35rem;
+  color: var(--color-muted);
+  font-size: .85rem;
+}
+
+.password-strength {
+  height: .45rem;
+  margin-top: .75rem;
+  overflow: hidden;
+  background: var(--color-border);
+  border-radius: 999px;
+}
+
+#password-strength-bar {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: #dc3545;
+  transition: width .2s ease, background-color .2s ease;
+}
+
+#password-strength-bar.medium { background: #ffc107; }
+#password-strength-bar.strong { background: #198754; }
+.strength-text { margin-top: .45rem; color: var(--color-muted); font-size: .85rem; }
+
 .form-label { font-weight: 700; }
 
 .form-control,
@@ -335,11 +378,11 @@ textarea:focus-visible {
 @media (max-width: 991.98px) {
   .hero { padding-top: 4rem; }
   .poster-stage { min-height: 520px; }
-  .contact-layout { grid-template-columns: 1fr; }
+  .contact-layout, .registration-section { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 767.98px) {
-  .section-space, .team-section, .contact-layout { padding-top: 4rem; padding-bottom: 4rem; }
+  .section-space, .team-section, .contact-layout, .registration-section { padding-top: 4rem; padding-bottom: 4rem; }
   .site-navigation { align-items: flex-start; flex-direction: column; }
   .nav-links { width: 100%; gap: .75rem 1rem !important; }
   .hero { padding-top: 3rem; padding-bottom: 3rem; }

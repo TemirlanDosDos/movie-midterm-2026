@@ -44,7 +44,7 @@
         <dl class="contact-list">
           <div><dt>Email</dt><dd><a href="mailto:cinescope.team@example.com">cinescope.team@example.com</a></dd></div>
           <div><dt>Course group</dt><dd>IT-2502</dd></div>
-          <div><dt>Project</dt><dd>Frontend Midterm 2026</dd></div>
+          <div><dt>Project</dt><dd>Frontend Endterm 2026</dd></div>
         </dl>
       </div>
 
@@ -58,6 +58,45 @@
         </div>
       </form>
     </section>
+
+    <section class="registration-section" aria-labelledby="register-title">
+      <div class="registration-copy">
+        <p class="eyebrow">JOIN CINESCOPE</p>
+        <h2 id="register-title">Create an account.</h2>
+        <p>Complete the form to check your details before registration. This student project validates the form in the browser and does not send personal data to a server.</p>
+      </div>
+
+      <form id="register-form" class="registration-form" novalidate>
+        <div class="mb-3">
+          <label class="form-label" for="register-name">Full name</label>
+          <input class="form-control" id="register-name" name="name" type="text" autocomplete="name" required>
+          <div id="name-feedback" class="field-feedback" aria-live="polite"></div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="register-email">Email</label>
+          <input class="form-control" id="register-email" name="email" type="email" autocomplete="email" required>
+          <div id="email-feedback" class="field-feedback" aria-live="polite"></div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="register-password">Password</label>
+          <input class="form-control" id="register-password" name="password" type="password" autocomplete="new-password" aria-describedby="password-strength password-feedback" required>
+          <div class="password-strength" aria-hidden="true"><span id="password-strength-bar"></span></div>
+          <div id="password-strength" class="strength-text">Password strength: not entered</div>
+          <div id="password-feedback" class="field-feedback" aria-live="polite"></div>
+        </div>
+
+        <div class="mb-4">
+          <label class="form-label" for="register-confirm">Confirm password</label>
+          <input class="form-control" id="register-confirm" name="confirm-password" type="password" autocomplete="new-password" required>
+          <div id="confirm-feedback" class="field-feedback" aria-live="polite"></div>
+        </div>
+
+        <button class="btn btn-warning btn-lg w-100" type="submit">Register</button>
+        <div id="register-alert" class="alert mt-3 mb-0 d-none" role="alert" aria-live="polite"></div>
+      </form>
+    </section>
   </main>
 
   <footer class="site-footer py-4">
@@ -67,5 +106,6 @@
       <p class="footer-copy mb-0">© 2026 CineScope. Student project.</p>
     </div>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 </html>
