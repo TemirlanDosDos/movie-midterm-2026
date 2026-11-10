@@ -79,3 +79,60 @@ footer .footer-content { width: min(100% - 2rem, 1140px); margin: 0 auto; }
   .ratings-section, .reviews-section, .form-section { padding: 1.25rem; }
 }
 
+
+/* My Watchlist: these rules only affect this section. */
+.watchlist-section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--page-radius);
+}
+.watchlist-section > p { color: var(--color-muted); }
+.watchlist-form { display: flex; flex-wrap: wrap; align-items: end; gap: 1rem; }
+.watchlist-form > div { flex: 1 1 180px; }
+.watchlist-section label { display: block; margin-bottom: .4rem; font-weight: 700; }
+.watchlist-section input, .watchlist-section select {
+  width: 100%;
+  min-height: 44px;
+  padding: .75rem;
+  color: var(--color-text);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: .65rem;
+  font: inherit;
+}
+.watchlist-section button {
+  min-height: 44px;
+  padding: .7rem 1rem;
+  color: var(--color-bg);
+  background: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  border-radius: .65rem;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+.watchlist-section button:hover { background: var(--color-accent-soft); }
+.watchlist-section .watchlist-secondary { color: var(--color-text); background: var(--color-bg); }
+.watchlist-section .watchlist-secondary:hover { border-color: var(--color-text); }
+#watchlist-feedback { min-height: 1.65em; color: var(--color-accent-soft); }
+.watchlist-table-scroll { overflow-x: auto; }
+.watchlist-table { width: 100%; min-width: 760px; border-collapse: collapse; table-layout: fixed; }
+.watchlist-table th, .watchlist-table td {
+  padding: .8rem;
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+  border-bottom: 1px solid var(--color-border);
+}
+.watchlist-table th { color: var(--color-bg); background: var(--color-accent); }
+.watchlist-table th:first-child { width: 24%; }
+.watchlist-table th:nth-child(3) { width: 12%; }
+.watchlist-table th:last-child { width: 24%; }
+.watchlist-actions { display: flex; flex-wrap: wrap; gap: .5rem; }
+@media (max-width: 767.98px) {
+  .watchlist-section { padding: 1.25rem; }
+  .watchlist-form > div { flex-basis: 100%; }
+  .watchlist-form > button { width: 100%; }
+}
