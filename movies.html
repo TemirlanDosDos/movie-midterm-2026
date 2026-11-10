@@ -67,6 +67,17 @@
         ★ Ratings are fixed demonstration scores out of 10 for this student project.
       </p>
 
+      <label class="form-label" for="movie-search">Search movies by title</label>
+      <input type="search" id="movie-search" class="form-control mb-3" autocomplete="off">
+      <div id="genre-filters" class="d-flex flex-wrap gap-2 mb-4" role="group" aria-label="Filter by genre">
+        <button type="button" class="btn btn-outline-warning active" data-genre="All" aria-pressed="true">All</button>
+        <button type="button" class="btn btn-outline-warning" data-genre="Sci-Fi" aria-pressed="false">Sci-Fi</button>
+        <button type="button" class="btn btn-outline-warning" data-genre="Action" aria-pressed="false">Action</button>
+        <button type="button" class="btn btn-outline-warning" data-genre="Drama" aria-pressed="false">Drama</button>
+        <button type="button" class="btn btn-outline-warning" data-genre="Animation" aria-pressed="false">Animation</button>
+      </div>
+      <p id="no-movies" role="status" hidden>No movies found</p>
+
       <div class="row g-4 movie-grid">
 
         <div class="col-12 col-sm-6 col-lg-4">
@@ -407,5 +418,7 @@
       <p class="mb-0 copyright">© 2026 CineScope · Student project</p>
     </div>
   </footer>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/chingizkhan.js"></script>
 </body>
 </html>
