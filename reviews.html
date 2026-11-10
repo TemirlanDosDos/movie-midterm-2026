@@ -30,6 +30,50 @@
         <div class="container">
             <h1>Movie Reviews</h1>
 
+            <section class="watchlist-section" aria-labelledby="watchlist-heading">
+                <h2 id="watchlist-heading">My Watchlist</h2>
+                <p>Keep track of movies you want to see and rate your favourites. Saved in this browser.</p>
+                <form id="watchlist-form" class="watchlist-form">
+                    <div>
+                        <label for="watchlist-title">Movie title</label>
+                        <input id="watchlist-title" name="title" type="text" required>
+                    </div>
+                    <div>
+                        <label for="watchlist-genre">Genre</label>
+                        <input id="watchlist-genre" name="genre" type="text" required>
+                    </div>
+                    <div>
+                        <label for="watchlist-rating">Rating (1–10)</label>
+                        <input id="watchlist-rating" name="rating" type="number" min="1" max="10" step="any" required>
+                    </div>
+                    <div>
+                        <label for="watchlist-status">Status</label>
+                        <select id="watchlist-status" name="status">
+                            <option>Plan to watch</option>
+                            <option>Watching</option>
+                            <option>Watched</option>
+                        </select>
+                    </div>
+                    <button type="submit">Add movie</button>
+                </form>
+                <p id="watchlist-feedback" role="status" aria-live="polite"></p>
+                <div class="watchlist-table-scroll" role="region" aria-label="My Watchlist table" tabindex="0">
+                    <table class="watchlist-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Movie title</th>
+                                <th scope="col">Genre</th>
+                                <th scope="col">Rating</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="watchlist-body"></tbody>
+                    </table>
+                </div>
+                <noscript>Enable JavaScript to use My Watchlist.</noscript>
+            </section>
+
             <section class="ratings-section">
                 <h2>Top Rated Movies</h2>
                 <p>These are sample ratings for our student project.</p>
@@ -170,5 +214,6 @@
             </ul>
         </div>
     </footer>
+    <script src="js/nurkadir.js"></script>
 </body>
 </html>
