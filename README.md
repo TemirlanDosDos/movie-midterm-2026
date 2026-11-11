@@ -1,6 +1,12 @@
 # CineScope
 
-CineScope is our Frontend Development midterm project. It is a small movie website where a visitor can browse movies, check ratings, watch trailers and read or submit reviews.
+CineScope is a movie website created for the Frontend Development midterm and expanded for the endterm project. A visitor can browse movies, search by title, filter by genre, watch trailers, manage a personal watchlist and use a registration form with validation.
+
+## Live website
+
+The project is published with GitHub Pages:
+
+**[Open CineScope](https://temirlandosdos.github.io/movie-midterm-2026/)**
 
 ## Team
 
@@ -10,129 +16,134 @@ CineScope is our Frontend Development midterm project. It is a small movie websi
 
 ## Pages
 
-- **Home** — introduction, featured movies and genres
-- **Movies** — responsive catalog with six movies
-- **Details** — movie information, ratings and trailers
-- **Reviews** — rating table, user reviews and review form
-- **Contact** — information about the team and feedback form
+- **Home** — project introduction, featured movies and genres
+- **Movies** — responsive movie catalog with search and genre filters
+- **Details** — movie information, ratings, trailers and image gallery
+- **Reviews** — ratings, reviews and personal watchlist
+- **Contact** — team information and registration form
 
-The same navigation menu connects all five pages.
+All pages use the same navigation and visual style.
 
-## Main features
+## Endterm features
 
-- responsive layout for desktop, tablet and mobile
-- Bootstrap grid and utility classes
-- custom CSS Grid and Flexbox layouts
-- semantic HTML elements
-- movie posters with lazy loading
-- embedded YouTube trailers
-- rating table with alternating rows
-- review and contact forms
-- hover and focus effects
-- CSS variables and Google Fonts
+### Movie search and filters
+
+The Movies page uses jQuery to search movies by title and filter cards by genre. The page also shows a message when no movies match the selected options.
+
+### Interactive gallery
+
+The Details page contains a modal image gallery. The user can open a picture, move to the previous or next image, use the keyboard arrows and close the gallery with the Escape key.
+
+### Personal watchlist
+
+The Reviews page contains a CRUD watchlist made with JavaScript. A visitor can:
+
+- add a movie;
+- edit its information;
+- delete it after confirmation;
+- choose a watching status;
+- save the list in the browser with `localStorage`.
+
+The form checks the title, genre, rating and status before changing the table.
+
+### Registration validation
+
+The Contact page contains a registration form with real-time validation:
+
+- required name;
+- email format check;
+- password strength indicator;
+- password confirmation;
+- success and error messages.
+
+The form is a student demonstration, so personal data is not sent to a server.
 
 ## Technologies
 
-HTML5, CSS3, Bootstrap 5.3, Git and GitHub were used in this project. The website does not require installation or a build process.
+- HTML5
+- CSS3
+- Bootstrap 5.3
+- JavaScript
+- jQuery
+- DOM manipulation
+- `localStorage`
+- Git and GitHub
+- GitHub Pages
 
-## Our work
+The project is a static website and does not require installation or a build command.
+
+## Team contribution
 
 ### Temirlan Dosmukhambetov
 
-I created the home and contact pages, made the shared visual style, connected the pages and completed the final integration and documentation.
+Created the Home and Contact pages, connected the shared design and navigation, added registration form validation, integrated the team branches and prepared the final repository and documentation.
 
 ### Chingizkhan
 
-Chingizkhan created the movie catalog and the detailed movie sections with ratings and trailers.
+Created the Movies and Details pages, movie search, genre filters and the interactive image gallery.
 
 ### Nurkadir
 
-Nurkadir created the reviews page, rating table, example reviews and review form.
+Created the Reviews page and the personal watchlist with add, edit, delete, validation and `localStorage`.
 
-## Website screenshots
+## Project screenshots
 
-### Home page
+The following places are reserved for the final screenshots.
 
-The home page introduces the project and gives quick access to the movie catalog and reviews.
+### 1. Home page
 
-![CineScope home page](screenshots/home-desktop.png)
+Shows the main page, navigation and hero section.
 
-### Movie catalog
+<!-- Add screenshots/home-desktop.png here -->
 
-Bootstrap columns display three movie cards on a large screen and fewer columns on smaller screens.
+### 2. Movie search and genre filter
 
-![Responsive movie catalog](screenshots/movies-grid.png)
+Shows the Movies page after entering a search query or selecting a genre.
 
-### Movie details and trailer
+<!-- Add screenshots/movie-filter.png here -->
 
-The details page combines information about each movie with a responsive YouTube trailer.
+### 3. Movie details and gallery
 
-![Movie details and trailer](screenshots/movie-details-trailer.png)
+Shows a movie description and the opened interactive gallery.
 
-### Ratings and reviews
+<!-- Add screenshots/movie-gallery.png here -->
 
-The reviews page contains a rating table and a form for visitor feedback.
+### 4. Watchlist
 
-![Movie rating table](screenshots/reviews-table.png)
+Shows several added movies and the Edit/Delete controls.
 
-![Review form](screenshots/review-form.png)
+<!-- Add screenshots/watchlist-crud.png here -->
 
-### Mobile layout
+### 5. Registration validation
 
-On a narrow screen, the team cards and contact content are placed vertically.
+Shows the registration form with validation messages and the password strength indicator.
 
-![Contact page on mobile](screenshots/contact-mobile.png)
+<!-- Add screenshots/registration-validation.png here -->
 
-## Code examples
+### 6. Mobile layout
 
-### Bootstrap responsive grid
+Shows the website navigation and content at mobile width.
 
-The Bootstrap column classes change the number of movie cards in each row depending on the screen width.
+<!-- Add screenshots/mobile-layout.png here -->
 
-![Bootstrap grid code](screenshots/code-bootstrap-grid.png)
+## Code screenshots
 
-Result:
+### jQuery search and filtering
 
-![Bootstrap grid result](screenshots/movies-grid.png)
+<!-- Add screenshots/code-movie-filter.png here -->
 
-### CSS Grid
+### DOM and localStorage watchlist
 
-CSS Grid is used for the genre section. A media query changes it to one column on mobile screens.
+<!-- Add screenshots/code-watchlist.png here -->
 
-![CSS Grid code](screenshots/code-css-grid.png)
+### Registration form validation
 
-### Flexbox navigation
+<!-- Add screenshots/code-validation.png here -->
 
-Flexbox keeps the logo and menu aligned inside the shared navigation bar.
+## How to run locally
 
-![Flexbox navigation code](screenshots/code-flexbox-navigation.png)
+1. Download or clone the repository.
+2. Open the project folder in WebStorm or another code editor.
+3. Open `index.html` in a browser.
 
-### `:nth-child()` selector
-
-The selector gives every second row in the rating table a different background.
-
-![CSS nth-child code](screenshots/code-nth-child.png)
-
-Result:
-
-![Alternating table rows](screenshots/reviews-table.png)
-
-### Form focus state
-
-The focus rule makes the currently selected form field easier to see.
-
-![Form focus CSS](screenshots/code-form-focus.png)
-
-Result:
-
-![Form focus result](screenshots/contact-focus-result.png)
-
-## How to open
-
-Open the published website using the link below:
-
-[https://movie-midterm-2026.vercel.app](https://movie-midterm-2026.vercel.app)
-
-## Repository
-
-https://github.com/TemirlanDosDos/movie-midterm-2026
+Repository: [github.com/TemirlanDosDos/movie-midterm-2026](https://github.com/TemirlanDosDos/movie-midterm-2026)
