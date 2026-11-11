@@ -94,51 +94,51 @@ The following places are reserved for the final screenshots.
 
 Shows the main page, navigation and hero section.
 
-<!-- Add screenshots/home-desktop.png here -->
+![CineScope home page](screenshots/home-desktop.png)
 
 ### 2. Movie search and genre filter
 
 Shows the Movies page after entering a search query or selecting a genre.
 
-<!-- Add screenshots/movie-filter.png here -->
+![Movie title search and genre filters](screenshots/movie-filter.png)
 
 ### 3. Movie details and gallery
 
 Shows a movie description and the opened interactive gallery.
 
-<!-- Add screenshots/movie-gallery.png here -->
+![Interactive movie gallery](screenshots/movie-gallery.png)
 
 ### 4. Watchlist
 
 Shows several added movies and the Edit/Delete controls.
 
-<!-- Add screenshots/watchlist-crud.png here -->
+![Personal movie watchlist](screenshots/watchlist-crud.png)
 
 ### 5. Registration validation
 
 Shows the registration form with validation messages and the password strength indicator.
 
-<!-- Add screenshots/registration-validation.png here -->
+![Registration form validation](screenshots/registration-validation.png)
 
 ### 6. Mobile layout
 
 Shows the website navigation and content at mobile width.
 
-<!-- Add screenshots/mobile-layout.png here -->
+![CineScope mobile layout](screenshots/mobile-layout.png)
 
 ## Code screenshots
 
 ### jQuery search and filtering
 
-<!-- Add screenshots/code-movie-filter.png here -->
+![jQuery movie filtering code](screenshots/code-movie-filter.png)
 
 ### DOM and localStorage watchlist
 
-<!-- Add screenshots/code-watchlist.png here -->
+![Watchlist localStorage code](screenshots/code-watchlist.png)
 
 ### Registration form validation
 
-<!-- Add screenshots/code-validation.png here -->
+![Registration validation code](screenshots/code-validation.png)
 
 ## How to run locally
 
