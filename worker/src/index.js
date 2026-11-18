@@ -58,7 +58,7 @@ export default {
         "Write a neutral English description in two short sentences. Do not use Markdown."
       ].join("\n");
 
-      const geminiResponse = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent", {
+      const geminiResponse = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
