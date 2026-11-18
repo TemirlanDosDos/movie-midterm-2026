@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sign in to your CineScope browser profile.">
+  <title>CineScope | Sign in</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/account.css">
+  <script src="js/account.js" defer></script>
+</head>
+<body class="account-page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <nav class="site-navigation account-container account-navigation" aria-label="Main navigation">
+      <a class="navbar-brand" href="index.html">CineScope<span class="brand-dot" aria-hidden="true">.</span></a>
+      <div class="account-nav-links">
+        <a href="index.html">Home</a>
+        <a href="movies.html">Movies</a>
+        <a href="movie-details.html">Details</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+        <a href="signin.html" aria-current="page">Sign in</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" class="account-container account-main">
+    <section class="account-intro" aria-labelledby="account-title">
+      <p class="eyebrow">YOUR CINESCOPE PROFILE</p>
+      <h1 id="account-title">Every movie night starts with you.</h1>
+      <p class="account-intro-text">Explore the collection, find your next favourite film and make yourself at home.</p>
+      <a class="text-link" href="movies.html">Explore the movie collection &rarr;</a>
+    </section>
+
+    <section class="account-card" aria-label="Sign in and profile">
+      <div id="signin-panel">
+        <p class="eyebrow">WELCOME TO CINESCOPE</p>
+        <h2>Sign in</h2>
+        <p class="account-description" id="account-help">Use your name and email to create a profile in this browser. No password needed.</p>
+
+        <form id="signin-form" aria-describedby="account-help" novalidate>
+          <div class="account-field">
+            <label for="account-name">Name</label>
+            <input id="account-name" name="name" type="text" autocomplete="name" placeholder="Your name" maxlength="80" aria-describedby="account-name-error" required>
+            <p id="account-name-error" class="account-field-error" aria-live="polite"></p>
+          </div>
+          <div class="account-field">
+            <label for="account-email">Email</label>
+            <input id="account-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" maxlength="254" aria-describedby="account-email-error" required>
+            <p id="account-email-error" class="account-field-error" aria-live="polite"></p>
+          </div>
+          <button class="account-button" type="submit">Sign in</button>
+        </form>
+      </div>
+
+      <div id="profile-panel" hidden>
+        <p class="eyebrow">YOU'RE SIGNED IN</p>
+        <h2 id="welcome-heading" tabindex="-1">Welcome, <span id="profile-name"></span>!</h2>
+        <p id="profile-email" class="account-profile-email"></p>
+        <p class="account-description">Your profile is saved in this browser. You can refresh this page and stay signed in.</p>
+        <a class="account-button" href="reviews.html">Go to reviews &amp; watchlist</a>
+        <button id="signout-button" class="account-button account-button-secondary" type="button">Sign out</button>
+      </div>
+
+      <p id="account-feedback" class="account-feedback" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer account-footer">
+    <div class="account-container footer-content">
+      <div><a class="footer-brand" href="index.html">CineScope</a><p>Movie information, ratings, trailers, and reviews.</p></div>
+      <p class="footer-copy">© 2026 CineScope. Student project.</p>
+    </div>
+  </footer>
+</body>
+</html>
