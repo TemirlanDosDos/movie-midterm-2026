@@ -11,7 +11,7 @@ The project is published with GitHub Pages:
 ## Team
 
 - Temirlan Dosmukhambetov — IT-2502
-- Chingizkhan
+- Chingiskhan
 - Nurkadir
 
 ## Pages
