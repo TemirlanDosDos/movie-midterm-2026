@@ -1,4 +1,4 @@
-const movieSearchApiUrl = "https://cinescope-movie-search.YOUR-SUBDOMAIN.workers.dev";
+const movieSearchApiUrl = "https://cinescope-movie-search.252893.workers.dev/";
 
 const aiMovieForm = document.getElementById("ai-movie-form");
 

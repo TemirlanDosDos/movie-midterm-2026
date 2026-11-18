@@ -38,7 +38,7 @@ The Sign in page validates a name and email, saves the browser profile in `local
 
 ### Gemini movie information
 
-Deployment status: the interface and Worker source are prepared, but the live integration still needs a Gemini API key, Worker deployment and its URL in `js/gemini-search.js`. Live API responses have not yet been tested.
+Deployment status: the Worker and secret are configured. Live verification is in progress; Gemini has returned temporary service errors, so successful movie results are not yet confirmed.
 
 The Movies page contains a Gemini-powered search. A visitor enters a movie title and receives its year, genres and a short description. The browser uses `fetch()` to call a Cloudflare Worker. The Worker stores the Gemini key as an encrypted secret, requests structured JSON from the Gemini API and returns only the required movie fields.
 

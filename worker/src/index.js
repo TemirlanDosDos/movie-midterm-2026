@@ -24,14 +24,8 @@ function jsonResponse(body, status, origin) {
   });
 }
 
-function getOutputText(interaction) {
-  const outputStep = interaction.steps?.find(function (step) {
-    return step.type === "model_output";
-  });
-  const textPart = outputStep?.content?.find(function (part) {
-    return part.type === "text";
-  });
-  return textPart?.text;
+function getOutputText(data) {
+  return data.candidates?.[0]?.content?.parts?.filter(part => !part.thought && part.text).map(part => part.text).join('');
 }
 
 export default {
@@ -64,20 +58,18 @@ export default {
         "Write a neutral English description in two short sentences. Do not use Markdown."
       ].join("\n");
 
-      const geminiResponse = await fetch("https://generativelanguage.googleapis.com/v1beta/interactions", {
+      const geminiResponse = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "x-goog-api-key": env.GEMINI_API_KEY,
-          "Api-Revision": "2026-05-20"
+          "x-goog-api-key": env.GEMINI_API_KEY
         },
         body: JSON.stringify({
-          model: "gemini-3.8-flash",
-          input: prompt,
-          response_format: {
-            type: "text",
-            mime_type: "application/json",
-            schema: {
+          contents: [{parts: [{text: prompt}]}],
+          generationConfig: {
+            responseMimeType: "application/json",
+            maxOutputTokens: 2048,
+            responseJsonSchema: {
               type: "object",
               properties: {
                 title: { type: "string" },
