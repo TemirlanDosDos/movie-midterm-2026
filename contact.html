@@ -27,7 +27,7 @@
     <section class="contact-intro">
       <p class="eyebrow">CONTACT / TEAM</p>
       <h1>Three students.<br><span>One movie guide.</span></h1>
-      <p>CineScope was created as a frontend midterm project. We divided the pages, worked in separate Git branches, and combined the result into one responsive website.</p>
+      <p>CineScope started as a frontend midterm project and grew into our final project. We worked in separate Git branches, then connected the pages, themes, local profiles and movie search.</p>
     </section>
 
     <section class="team-section" aria-labelledby="team-title">
@@ -41,11 +41,11 @@
 
     <section class="contact-layout" aria-labelledby="message-title">
       <div class="contact-details">
-        <p class="eyebrow">GET IN TOUCH</p><h2 id="message-title">Tell us what you watched.</h2><p>Use the form for feedback about the website or a movie recommendation.</p>
+        <p class="eyebrow">GET IN TOUCH</p><h2 id="message-title">Tell us what you watched.</h2><p>This demonstration form checks your input locally. Messages are not sent to the team.</p>
         <dl class="contact-list">
           <div><dt>Email</dt><dd><a href="mailto:cinescope.team@example.com">cinescope.team@example.com</a></dd></div>
           <div><dt>Course group</dt><dd>IT-2502</dd></div>
-          <div><dt>Project</dt><dd>Frontend Endterm 2026</dd></div>
+          <div><dt>Project</dt><dd>Frontend Final Project 2026</dd></div>
         </dl>
       </div>
 
@@ -55,7 +55,8 @@
           <div class="col-12 col-md-6"><label class="form-label" for="contact-email">Email</label><input class="form-control" id="contact-email" name="email" type="email" placeholder="you@example.com" required></div>
           <div class="col-12"><label class="form-label" for="contact-topic">Topic</label><select class="form-select" id="contact-topic" name="topic"><option>Website feedback</option><option>Movie recommendation</option><option>Question for the team</option></select></div>
           <div class="col-12"><label class="form-label" for="contact-message">Message</label><textarea class="form-control" id="contact-message" name="message" rows="6" placeholder="Write your message here" required></textarea></div>
-          <div class="col-12"><button class="btn btn-warning btn-lg w-100" type="submit">Send message</button></div>
+          <div class="col-12"><button class="btn btn-warning btn-lg w-100" type="submit">Check message</button></div>
+          <p id="contact-feedback" class="col-12 mb-0" role="status"></p>
         </div>
       </form>
     </section>

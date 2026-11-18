@@ -57,27 +57,27 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function updateAccountLinks() {
-  const accountLinks = document.querySelectorAll("[data-account-link]");
-  let user = null;
+    const accountLinks = document.querySelectorAll("[data-account-link]");
+    let user = null;
 
-  try {
-    user = JSON.parse(localStorage.getItem(userStorageKey));
-  } catch (error) {
-    user = null;
-  }
+    try {
+      user = JSON.parse(localStorage.getItem(userStorageKey));
+    } catch (error) {
+      user = null;
+    }
 
-  if (user && typeof user.name === "string" && user.name.trim()) {
-    const firstName = user.name.trim().split(/\s+/)[0];
-    accountLinks.forEach(function (link) {
-      link.textContent = firstName;
-      link.setAttribute("aria-label", "Open profile for " + firstName);
-    });
-  } else {
-    accountLinks.forEach(function (link) {
-      link.textContent = "Sign in";
-      link.removeAttribute("aria-label");
-    });
-  }
+    if (user && typeof user.name === "string" && user.name.trim()) {
+      const firstName = user.name.trim().split(/\s+/)[0];
+      accountLinks.forEach(function (link) {
+        link.textContent = firstName;
+        link.setAttribute("aria-label", "Open profile for " + firstName);
+      });
+    } else {
+      accountLinks.forEach(function (link) {
+        link.textContent = "Sign in";
+        link.removeAttribute("aria-label");
+      });
+    }
   }
   updateAccountLinks();
   window.addEventListener("account-change", updateAccountLinks);

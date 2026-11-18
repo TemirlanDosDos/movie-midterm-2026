@@ -1,4 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
+  const contactForm = document.querySelector('.contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+      document.getElementById('contact-feedback').textContent = 'Your input is valid. This demo does not send messages.';
+    });
+  }
+
   const form = document.getElementById('register-form');
 
   if (!form) {

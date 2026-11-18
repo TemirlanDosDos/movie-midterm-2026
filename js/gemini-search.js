@@ -18,12 +18,6 @@ if (aiMovieForm) {
       return;
     }
 
-    if (movieSearchApiUrl.includes("YOUR-SUBDOMAIN")) {
-      status.textContent = "The Gemini service is waiting for deployment.";
-      result.hidden = true;
-      return;
-    }
-
     searchButton.disabled = true;
     searchButton.textContent = "Searching...";
     status.textContent = "Gemini is searching for the movie.";
