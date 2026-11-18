@@ -1,4 +1,7 @@
 .idea/
+.dev.vars*
+.env*
+worker/.wrangler/
 *.iml
 .DS_Store
 

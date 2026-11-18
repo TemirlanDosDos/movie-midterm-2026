@@ -89,6 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
     showProfile(user);
+    window.dispatchEvent(new Event('account-change'));
     form.reset();
     document.getElementById('welcome-heading').focus();
   });
@@ -101,6 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
     showForm();
+    window.dispatchEvent(new Event('account-change'));
     feedback.textContent = 'You have signed out.';
     nameInput.focus();
   });

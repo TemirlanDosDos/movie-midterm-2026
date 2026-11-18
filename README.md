@@ -1,6 +1,6 @@
 # CineScope
 
-CineScope is a movie website created for the Frontend Development midterm and expanded for the endterm project. A visitor can browse movies, search by title, filter by genre, watch trailers, manage a personal watchlist and use a registration form with validation.
+CineScope is a movie website created for the Frontend Development course and expanded for the final project. A visitor can browse movies, search by title, filter by genre, watch trailers, manage a personal watchlist, sign in locally and ask Google Gemini for short movie information.
 
 ## Live website
 
@@ -21,10 +21,30 @@ The project is published with GitHub Pages:
 - **Details** — movie information, ratings, trailers and image gallery
 - **Reviews** — ratings, reviews and personal watchlist
 - **Contact** — team information and registration form
+- **FAQ** — seven questions with animated jQuery answers
+- **Sign in** — a browser profile stored with `localStorage`
 
 All pages use the same navigation and visual style.
 
-## Endterm features
+## Final project features
+
+### Light and dark themes
+
+The theme switch is available from every page. The selected theme is stored in `localStorage` and remains active after refresh.
+
+### Local sign in
+
+The Sign in page validates a name and email, saves the browser profile in `localStorage`, restores it after refresh and provides a Sign out action. Passwords are not collected or stored.
+
+### Gemini movie information
+
+Deployment status: the interface and Worker source are prepared, but the live integration still needs a Gemini API key, Worker deployment and its URL in `js/gemini-search.js`. Live API responses have not yet been tested.
+
+The Movies page contains a Gemini-powered search. A visitor enters a movie title and receives its year, genres and a short description. The browser uses `fetch()` to call a Cloudflare Worker. The Worker stores the Gemini key as an encrypted secret, requests structured JSON from the Gemini API and returns only the required movie fields.
+
+### jQuery FAQ
+
+The FAQ page contains seven movie-related questions. jQuery `.slideToggle()` opens and closes each answer and changes its `+`/`−` indicator.
 
 ### Movie search and filters
 
@@ -69,6 +89,8 @@ The form is a student demonstration, so personal data is not sent to a server.
 - `localStorage`
 - Git and GitHub
 - GitHub Pages
+- Google Gemini API
+- Cloudflare Workers
 
 The project is a static website and does not require installation or a build command.
 
@@ -76,15 +98,19 @@ The project is a static website and does not require installation or a build com
 
 ### Temirlan Dosmukhambetov
 
-Created the Home and Contact pages, connected the shared design and navigation, added registration form validation, integrated the team branches and prepared the final repository and documentation.
+Created the Home and Contact pages, shared theme system and Gemini API integration; connected the navigation, merged the team branches and prepared the final repository and documentation.
 
 ### Chingizkhan
 
-Created the Movies and Details pages, movie search, genre filters and the interactive image gallery.
+Created the Movies and Details pages, movie search, genre filters, interactive image gallery and jQuery FAQ.
 
 ### Nurkadir
 
-Created the Reviews page and the personal watchlist with add, edit, delete, validation and `localStorage`.
+Created the Reviews page, personal watchlist and Sign in page with validation and `localStorage`.
+
+## AI use disclosure
+
+The movie-information integration uses Google Gemini. OpenAI Codex assisted with code, integration and documentation. Gemini answers can contain mistakes, which is stated next to the search form on the website.
 
 ## Project screenshots
 
