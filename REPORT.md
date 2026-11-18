@@ -120,4 +120,4 @@ OpenAI Codex assisted with code, integration, troubleshooting and documentation.
 - [GitHub repository](https://github.com/TemirlanDosDos/movie-midterm-2026)
 - [Live website](https://temirlandosdos.github.io/movie-midterm-2026/)
 
-The numbered placeholders above are for the final screenshots. Capture instructions are in [SCREENSHOTS.md](SCREENSHOTS.md).
+The numbered placeholders above are for the final screenshots.

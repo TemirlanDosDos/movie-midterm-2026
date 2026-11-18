@@ -114,7 +114,7 @@ The movie-information integration uses Google Gemini. OpenAI Codex assisted with
 
 ## Project screenshots
 
-These screenshots show the existing catalog, gallery, watchlist and validation features. Screenshots of the final additions belong in the [group report](REPORT.md); see the [capture guide](SCREENSHOTS.md).
+These screenshots show the existing catalog, gallery, watchlist and validation features. Screenshots of the final additions belong in the [group report](REPORT.md).
 
 ### 1. Home page
 
@@ -166,14 +166,3 @@ Shows the website navigation and content at mobile width.
 
 ![Registration validation code](screenshots/code-validation.png)
 
-## How to run locally
-
-1. Download or clone the repository.
-2. Open the project folder in WebStorm or another code editor.
-3. Serve the folder at `http://localhost:5500` (for example, run `python -m http.server 5500` if Python is installed), then open that address. The Gemini Worker permits this origin and the published GitHub Pages origin.
-
-Repository: [github.com/TemirlanDosDos/movie-midterm-2026](https://github.com/TemirlanDosDos/movie-midterm-2026)
-
-## Final project report
-
-[Read the group report](REPORT.md) for objectives, development process, responsibilities and screenshot slots. [Screenshot instructions](SCREENSHOTS.md) explain what to capture.
